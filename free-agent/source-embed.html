@@ -1,12 +1,12 @@
-<!-- DCP | Free AI Agent page | Squarespace Code Block embed
+<!-- DCP | AI Agent page | Squarespace Code Block embed
      Paste this ENTIRE file into one Code Block (Edit page > + > Code > paste > Save).
      Everything you may want to change is in the CONFIG section of the <script>, each line commented. -->
 <div class="dcp-agent-free" aria-live="polite">
   <noscript>
     <div class="dcp-agent-free__noscript">
-      <h2>Get your own AI agent, free</h2>
+      <h2>Get your own AI agent</h2>
       <p>We build AI agents that do real work for small businesses, educators and new founders: research, follow-ups, scheduling, outreach drafts. Each agent combines memory of your business, skills for how you like the work done, and the tools you already use.</p>
-      <p>Your free agent is built around one task you choose and runs on its own for a month. New to AI? We add a billion tokens so it can keep running for a few months.</p>
+      <p>Your agent is built around one task you choose and runs on its own for a month. New to AI? We add a billion tokens so it can keep running for a few months.</p>
       <p>Book a free 30-minute agent review after your first week: <a href="https://calendly.com/d/dty-g9n-42r">calendly.com/d/dty-g9n-42r</a></p>
     </div>
   </noscript>
@@ -76,7 +76,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"What is an AI agent?","acceptedAnswer":{"@type":"Answer","text":"An AI agent is a long-running assistant that combines memory of your business, skills for how you like the work done, and the tools you already use, so it can carry out a repeatable task and check in with you before anything goes out."}},
-{"@type":"Question","name":"What does the free agent include?","acceptedAnswer":{"@type":"Answer","text":"A free agent built around one task you choose that runs on its own for a month. If you are new to AI, Development Consulting Partners adds a billion tokens so it can keep running for a few months."}},
+{"@type":"Question","name":"What does the AI agent include?","acceptedAnswer":{"@type":"Answer","text":"An agent built around one task you choose that runs on its own for a month. If you are new to AI, Development Consulting Partners adds a billion tokens so it can keep running for a few months."}},
 {"@type":"Question","name":"Who is it for?","acceptedAnswer":{"@type":"Answer","text":"Small business owners, people starting a business, working professionals and managers, college students, high school students 18 and older, teachers, coaches, trainers and school staff, and students and parents. Agents are for people 18 and older."}}
 ]}
 </script>
@@ -89,7 +89,7 @@
     // Full launch: codes are never shown on this page; Salesforce emails the active code (plus the agent message) after sign-up.
     // Soft launch (softLaunch: true, below): the code shows on screen right after sign-up instead.
     senderEmail: 'info@developmentconsultingpartners.com', // Who the code email comes from (shown on the "check your email" screen)
-    codeEmailSubject: 'Your free AI agent code',           // Subject line people should look for (must match the Salesforce email template)
+    codeEmailSubject: 'Your AI agent code',           // Subject line people should look for (must match the Salesforce email template)
     redeemPath: 'Settings > General > Redeem invite code', // Where people enter the code in the app (must be within 48 hours of creating their account)
     redeemWindow: '48 hours',                // How long after sign-up the app accepts an invite code
     appName: 'Muse from Meta',               // The app people install
@@ -114,7 +114,7 @@
     // --- Salesforce Web-to-Lead (sign-up creates a Lead; Salesforce then emails the code) ---
     sfEnabled: true,                         // true = send to Salesforce; false = open an email instead
     sfOrgId: '00D4x0000017re9',              // DCP Salesforce org ID (do not change)
-    sfLeadSource: 'Website',                 // Lead Source value stored on the Lead (campaign carries the free-agent detail)
+    sfLeadSource: 'Website',                 // Lead Source value stored on the Lead (campaign carries the AI agent detail)
     sfCampaignId: '',                        // Salesforce Campaign ID for website sign-ups (Joseph fills in). '' = no campaign.
     sfMessageField: '',                      // Lead custom field ID (00N...) that holds the agent message for the email template. '' = description only.
     sfPathField: '',                         // Lead custom field ID for the path (Business owner, Teacher...). '' = description only.
@@ -125,14 +125,14 @@
     sfReferralField: '',                     // Lead custom field ID that stores the person's own Muse invite code. '' = description only.
 
     // --- Headline and proof (hero) ---
-    kicker: 'Free AI agent',
+    kicker: 'Your AI agent',
     headline: 'Get an AI agent that does real work for you.',
     subhead: 'Answer a few questions and we’ll build your agent’s instructions in about 8 minutes. Then you set it up, and it starts working.',
     proof: ['17 agents went live at a single community summit', 'Runs on its own for a month', 'New to AI? A billion tokens on us'],
 
     // --- The offer card ---
     offerTitle: 'What you get',
-    spotsNote: 'Free spots are limited and go first come, first served. If they’re gone when you sign up, we’ll put you on the waitlist and email your code as soon as a spot opens.', // Shown under the offer and on the sign-up screen. '' hides it.
+    spotsNote: 'Spots are limited and go first come, first served. If they’re gone when you sign up, we’ll put you on the waitlist and email your code as soon as a spot opens.', // Shown under the offer and on the sign-up screen. '' hides it.
     offerItems: [
       'An agent built around one task you choose',
       'It works on its own for a month, and checks with you before anything goes out',
@@ -695,14 +695,14 @@
         var pe=field(c,'Parent or guardian’s email','email'),te=field(c,'Teacher’s email (add more with commas)','text','',true);
       }else{
         c.appendChild(h('p','af-h3','Ready to send you your agent. Enter your email so we can get started.'));
-        c.appendChild(h('p','af-p af-muted',SOFT()?(isMuse()?'Tap the button and your free code and setup steps appear on the next screen.':'Tap the button and your setup steps for '+esc(platName())+' appear on the next screen.'):((isMuse()?'We’ll send your registration code and setup instructions to your email from ':'We’ll send your setup instructions for '+esc(platName())+' to your email from ')+esc(CONFIG.senderEmail)+'. Check it right after you tap the button for your next steps.')));
+        c.appendChild(h('p','af-p af-muted',SOFT()?(isMuse()?'Tap the button and your code and setup steps appear on the next screen.':'Tap the button and your setup steps for '+esc(platName())+' appear on the next screen.'):((isMuse()?'We’ll send your registration code and setup instructions to your email from ':'We’ll send your setup instructions for '+esc(platName())+' to your email from ')+esc(CONFIG.senderEmail)+'. Check it right after you tap the button for your next steps.')));
         var fn=field(c,'First name','text',a.name||''),ln=field(c,'Last name','text'),em=field(c,'Email','email'),
             co=coLabel()?field(c,coLabel(),'text',a.biz||'',true):null;
       }
       c.appendChild(h('p','af-label',S.minor?'What made you want an agent?':'What made you want an agent?'));c.lastChild.style.fontSize='16px';c.lastChild.style.marginTop='14px';
       var rchips=h('div','af-chips');S.reason=S.reason||'';reasons().forEach(function(r){var ch=h('button','af-chip',esc(r));ch.type='button';ch.setAttribute('aria-pressed',S.reason===r?'true':'false');ch.addEventListener('click',function(){S.reason=r;[].forEach.call(rchips.children,function(x){x.setAttribute('aria-pressed','false');});ch.setAttribute('aria-pressed','true');});rchips.appendChild(ch);});c.appendChild(rchips);
       var rmore=field(c,'Anything else we should know?','text','',true);
-      if(!S.minor&&isMuse()&&CONFIG.spotsNote)c.appendChild(h('p','af-muted',esc(SOFT()?'Free spots are limited and go first come, first served.':CONFIG.spotsNote)));
+      if(!S.minor&&isMuse()&&CONFIG.spotsNote)c.appendChild(h('p','af-muted',esc(SOFT()?'Spots are limited and go first come, first served.':CONFIG.spotsNote)));
       var st=h('p','af-muted');st.setAttribute('role','status');c.appendChild(st);
       c.appendChild(h('p','af-muted',SOFT()?'We use your email to check that your agent started and follow up if you need help. Unsubscribe anytime.':'We use your email to send your code, check that your agent started, and follow up if you need help. Unsubscribe anytime.'));
       var n=h('div','af-nav');n.appendChild(btn('Back','af-btn-ghost',function(){if(S.minor){S.i=S.path.qs.length-1;question();}else platform();}));
@@ -715,14 +715,14 @@
           if(!okEmail(p)){st.textContent='Please enter your parent or guardian’s email.';st.className='af-err';return;}
           if(t&&!t.split(',').every(function(x){return okEmail(x.trim());})){st.textContent='Please check the teacher email(s).';st.className='af-err';return;}
           f.first_name='';f.last_name='Parent of '+(a.name||'student');f.email=p;f.company=(a.name||'Student')+' (family)';
-          f.description='Free AI Agent page | UNDER 18: code goes to parent only, after parent approval\nStudent first name: '+(a.name||'')+'\nTeacher email(s): '+(t||'none')+'\nWhy they signed up: '+why+'\n'+details()+'\n\nAgent message:\n'+sfMsg(msg);
+          f.description='AI Agent page | UNDER 18: code goes to parent only, after parent approval\nStudent first name: '+(a.name||'')+'\nTeacher email(s): '+(t||'none')+'\nWhy they signed up: '+why+'\n'+details()+'\n\nAgent message:\n'+sfMsg(msg);
           S.contact={email:p};
         }else{
           var e=em.value.trim();
           if(!fn.value.trim()){st.textContent='Please enter your first name.';st.className='af-err';return;}
           if(!okEmail(e)){st.textContent='Please enter a valid email so we can send your code.';st.className='af-err';return;}
           f.first_name=fn.value.trim();f.last_name=ln.value.trim()||'Unknown';f.email=e;f.company=(co&&co.value.trim())||(fn.value.trim()+' (individual)');
-          f.description='Free AI Agent page | '+(SOFT()?'SOFT LAUNCH | ':'')+(isMuse()?(SOFT()?'Code shown on screen: '+CONFIG.softCode:'Code requested (Muse)'):'Own AI app | Platform: '+platName())+'\nWhy they signed up: '+why+'\n'+details()+'\n\nAgent message:\n'+sfMsg(msg);
+          f.description='AI Agent page | '+(SOFT()?'SOFT LAUNCH | ':'')+(isMuse()?(SOFT()?'Code shown on screen: '+CONFIG.softCode:'Code requested (Muse)'):'Own AI app | Platform: '+platName())+'\nWhy they signed up: '+why+'\n'+details()+'\n\nAgent message:\n'+sfMsg(msg);
           S.contact={first:f.first_name,last:ln.value.trim(),email:e,company:co?co.value.trim():''};
         }
         if(CONFIG.sfCampaignId){f.Campaign_ID=CONFIG.sfCampaignId;f.member_status='Responded';}
@@ -733,7 +733,7 @@
         if(CONFIG.sfJobCategoryField&&a.taskCat)f[CONFIG.sfJobCategoryField]=a.taskCat;
         if(CONFIG.sfPlatformField)f[CONFIG.sfPlatformField]=S.minor?'Muse':(isMuse()?'Muse':platName());
         if(CONFIG.sfEnabled)sendSF(f);
-        else{location.href='mailto:'+CONFIG.helpEmail+'?subject='+encodeURIComponent('Free AI agent code request')+'&body='+encodeURIComponent(f.description+'\nEmail: '+f.email);}
+        else{location.href='mailto:'+CONFIG.helpEmail+'?subject='+encodeURIComponent('AI agent code request')+'&body='+encodeURIComponent(f.description+'\nEmail: '+f.email);}
         sent();
       }));
       c.appendChild(n);render([c]);
@@ -757,7 +757,7 @@
         mm.appendChild(r2);mm.appendChild(st2);mm.appendChild(pk2);out.push(mm);
         var n3=h('div','af-nav');n3.appendChild(btn('Wrong email? Go back','af-btn-ghost',packet));n3.appendChild(btn('Did it work?','af-btn-primary',check));out.push(n3);render(out);return;}
       if(SOFT()){
-        c.appendChild(h('p','af-ok','✓ You’re in. Here’s your free code'));
+        c.appendChild(h('p','af-ok','✓ You’re in. Here’s your code'));
         var cb=h('div','af-codebox');cb.appendChild(h('span','af-code',esc(CONFIG.softCode)));var cst=h('p','af-muted');cst.setAttribute('role','status');
         cb.appendChild(btn('Copy code','af-btn-primary',function(){copy(CONFIG.softCode,cst);}));c.appendChild(cb);c.appendChild(cst);
         c.appendChild(h('p','af-p','Redeem it in '+esc(CONFIG.appName)+' under '+esc(CONFIG.redeemPath)+', within '+esc(CONFIG.redeemWindow)+' of creating your account. '+esc(CONFIG.appName)+' confirms your free tokens on that screen.'));
@@ -765,7 +765,7 @@
         out.push(getApp('Next: get '+CONFIG.appName));
       } else {
       c.appendChild(h('p','af-ok','✓ Check your email now for next steps'));
-      c.appendChild(h('p','af-p','Your registration code and setup instructions are on the way to '+esc(S.contact.email)+' from '+esc(CONFIG.senderEmail)+'. Look for “'+esc(CONFIG.codeEmailSubject)+'.” If it isn’t there in a few minutes, check spam or promotions. If this round of free spots is already full, the email will say you’re on the waitlist, and your code will follow as soon as a spot opens.'));
+      c.appendChild(h('p','af-p','Your registration code and setup instructions are on the way to '+esc(S.contact.email)+' from '+esc(CONFIG.senderEmail)+'. Look for “'+esc(CONFIG.codeEmailSubject)+'.” If it isn’t there in a few minutes, check spam or promotions. If this round of spots is already full, the email will say you’re on the waitlist, and your code will follow as soon as a spot opens.'));
       var ul=h('ol','af-list');['Get '+CONFIG.appName+' on your phone or computer and sign up.','Redeem the code from the email in '+CONFIG.redeemPath+', within '+CONFIG.redeemWindow+' of signing up. '+CONFIG.appName+' confirms your free tokens there.','Paste your agent message into a new chat and send it. Your agent replies with what it will do first.'].forEach(function(x){ul.appendChild(h('li',null,esc(x)));});c.appendChild(ul);out.push(c);
       out.push(getApp('While you wait: get '+CONFIG.appName));
       }
@@ -816,7 +816,7 @@
         var code=rc.value.trim().toUpperCase().replace(/\s/g,''),e=K.email||(re?re.value.trim():'');
         if(!/^[A-Z0-9]{5,12}$/.test(code)){rs.textContent='Please enter the code exactly as it appears in the app.';rs.className='af-err';return;}
         if(!okEmail(e)){rs.textContent='Please enter your email so we can match your code to you.';rs.className='af-err';return;}
-        var f={first_name:K.first||S.a.name||'',last_name:K.last||'Unknown',email:e,company:K.company||((K.first||S.a.name||'')+' (individual)'),lead_source:CONFIG.sfLeadSource,description:'Free AI Agent page | Muse invite code shared: '+code+'\n'+details()};
+        var f={first_name:K.first||S.a.name||'',last_name:K.last||'Unknown',email:e,company:K.company||((K.first||S.a.name||'')+' (individual)'),lead_source:CONFIG.sfLeadSource,description:'AI Agent page | Muse invite code shared: '+code+'\n'+details()};
         if(CONFIG.sfReferralField)f[CONFIG.sfReferralField]=code;if(CONFIG.sfCampaignId){f.Campaign_ID=CONFIG.sfCampaignId;f.member_status='Responded';}
         if(CONFIG.sfEnabled)sendSF(f);else{location.href='mailto:'+CONFIG.helpEmail+'?subject='+encodeURIComponent('My Muse invite code')+'&body='+encodeURIComponent(f.description+'\nEmail: '+e);}
         rs.textContent='Thanks! We saved your code. If we share it and someone redeems it, you’ll both get free tokens.';rs.className='af-ok';
@@ -833,7 +833,7 @@
       var n=h('div','af-nav');n.appendChild(btn('Back','af-btn-ghost',check));
       n.appendChild(btn('Send to our team','af-btn-primary',function(){
         var e=em.value.trim();if(!okEmail(e)){st.textContent='Please enter a valid email so we can reach you.';st.className='af-err';return;}
-        var desc='Free AI Agent page | Platform: '+(isMuse()?'Muse':platName())+' | Path: '+S.path.label+' | Stuck: '+(reason||'not given')+'\nFirst job: '+(S.a.task||'')+(S.a.org?'\nContext: '+S.a.org:'')+(S.a.tools?'\nTools: '+S.a.tools:'')+'\nGoal: '+(S.a.goal||'');
+        var desc='AI Agent page | Platform: '+(isMuse()?'Muse':platName())+' | Path: '+S.path.label+' | Stuck: '+(reason||'not given')+'\nFirst job: '+(S.a.task||'')+(S.a.org?'\nContext: '+S.a.org:'')+(S.a.tools?'\nTools: '+S.a.tools:'')+'\nGoal: '+(S.a.goal||'');
         if(CONFIG.sfEnabled){sendSF({first_name:S.a.name||'',last_name:last.value.trim()||'Unknown',email:e,company:(co&&co.value.trim())||((S.a.name||'')+' (individual)'),lead_source:CONFIG.sfLeadSource,description:desc});st.textContent='Thanks. Our team will email you within one business day.';st.className='af-ok';}
         else{location.href='mailto:'+CONFIG.helpEmail+'?subject='+encodeURIComponent('Help setting up my AI agent')+'&body='+encodeURIComponent(desc+'\nEmail: '+e);}
       }));
