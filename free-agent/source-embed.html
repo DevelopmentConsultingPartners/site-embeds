@@ -1,0 +1,859 @@
+<!-- DCP | Free AI Agent page | Squarespace Code Block embed
+     Paste this ENTIRE file into one Code Block (Edit page > + > Code > paste > Save).
+     Everything you may want to change is in the CONFIG section of the <script>, each line commented. -->
+<div class="dcp-agent-free" aria-live="polite">
+  <noscript>
+    <div class="dcp-agent-free__noscript">
+      <h2>Get your own AI agent, free</h2>
+      <p>We build AI agents that do real work for small businesses, educators and new founders: research, follow-ups, scheduling, outreach drafts. Each agent combines memory of your business, skills for how you like the work done, and the tools you already use.</p>
+      <p>Your free agent is built around one task you choose and runs on its own for a month. New to AI? We add a billion tokens so it can keep running for a few months.</p>
+      <p>Book a free 30-minute agent review after your first week: <a href="https://calendly.com/d/dty-g9n-42r">calendly.com/d/dty-g9n-42r</a></p>
+    </div>
+  </noscript>
+</div>
+
+<style>
+.dcp-agent-free{--navy:#0D1A33;--teal:#2CD5C4;--tealdk:#0E7C72;--green:#1F8F4E;--red:#C9353A;--muted:#5A6B8C;--line:rgba(13,26,51,.12);--soft:#F4F7FB;
+  font-family:inherit;color:var(--navy);max-width:760px;margin:0 auto;line-height:1.5;box-sizing:border-box}
+.dcp-agent-free *{box-sizing:border-box}
+.dcp-agent-free .af-hero{background:var(--navy);color:#fff;border-radius:14px;padding:32px 28px;margin-bottom:18px}
+.dcp-agent-free .af-kicker{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:700;margin:0 0 8px}
+.dcp-agent-free .af-h1{font-size:30px;line-height:1.15;font-weight:700;margin:0 0 10px;color:#fff}
+.dcp-agent-free .af-h2{font-size:22px;line-height:1.25;font-weight:700;margin:0 0 12px;color:var(--navy)}
+.dcp-agent-free .af-h3{font-size:17px;font-weight:700;margin:0 0 4px;color:var(--navy)}
+.dcp-agent-free .af-p{font-size:16px;margin:0 0 10px}
+.dcp-agent-free .af-hero .af-p{color:#D6DEEC}
+.dcp-agent-free .af-muted{color:var(--muted);font-size:14px}
+.dcp-agent-free .af-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:12px}
+.dcp-agent-free .af-proof{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.dcp-agent-free .af-pill{background:rgba(44,213,196,.14);color:#fff;border:1px solid rgba(44,213,196,.45);border-radius:999px;padding:6px 12px;font-size:14px}
+.dcp-agent-free .af-grid{display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:620px){.dcp-agent-free .af-grid.af-2{grid-template-columns:1fr 1fr}.dcp-agent-free .af-grid.af-3{grid-template-columns:1fr 1fr 1fr}}
+.dcp-agent-free .af-choice{display:flex;gap:14px;align-items:flex-start;text-align:left;width:100%;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;cursor:pointer;font:inherit;color:inherit;transition:border-color .15s,box-shadow .15s}
+.dcp-agent-free .af-choice:hover{border-color:var(--tealdk);box-shadow:0 2px 10px rgba(13,26,51,.08)}
+.dcp-agent-free .af-choice[aria-pressed="true"]{border-color:var(--tealdk);box-shadow:0 0 0 2px rgba(14,124,114,.25)}
+.dcp-agent-free .af-pick{display:flex;gap:12px;align-items:center;text-align:left;width:100%;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;font:inherit;color:inherit}
+.dcp-agent-free .af-pick[aria-pressed="true"]{border:2px solid var(--teal);background:rgba(44,213,196,.08)}
+.dcp-agent-free .af-pick .af-badge{flex:0 0 30px;height:30px}
+.dcp-agent-free .af-badge{flex:0 0 36px;height:36px;border-radius:9px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--tealdk)}
+.dcp-agent-free .af-codebox{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:6px 0 4px}.dcp-agent-free .af-code{font:700 26px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.12em;background:#EEF4F9;color:#0d1a33;border:2px dashed #2CD5C4;border-radius:12px;padding:12px 18px}
+.dcp-agent-free .af-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:inherit;font-weight:700;font-size:16px;border-radius:10px;padding:13px 20px;cursor:pointer;border:1px solid transparent;text-decoration:none;min-height:46px}
+.dcp-agent-free .af-btn-primary{background:var(--navy);color:#fff}
+.dcp-agent-free .af-btn-primary:hover{background:#1B2C52}
+.dcp-agent-free .af-btn-ghost{background:#fff;color:var(--navy);border-color:var(--line)}
+.dcp-agent-free .af-device{border:1px solid var(--line);border-radius:12px;padding:14px;background:#fff}
+.dcp-agent-free .af-device.af-here{border:2px solid var(--teal)}
+.dcp-agent-free .af-device .af-nav{justify-content:flex-start;margin-top:8px}
+.dcp-agent-free .af-heretag{display:inline-block;font-size:12px;font-weight:700;color:var(--tealdk);background:rgba(44,213,196,.15);border-radius:999px;padding:2px 10px;margin-left:8px;vertical-align:middle}
+.dcp-agent-free .af-btn-teal{background:var(--teal);color:var(--navy)}
+.dcp-agent-free .af-btn:focus-visible,.dcp-agent-free .af-choice:focus-visible,.dcp-agent-free .af-input:focus-visible{outline:3px solid var(--tealdk);outline-offset:2px}
+.dcp-agent-free .af-nav{display:flex;gap:10px;justify-content:space-between;margin-top:16px;flex-wrap:wrap}
+.dcp-agent-free .af-progress{height:6px;background:var(--soft);border-radius:999px;overflow:hidden;margin:0 0 14px}
+.dcp-agent-free .af-progress span{display:block;height:100%;background:var(--tealdk);transition:width .25s}
+.dcp-agent-free .af-label{display:block;font-weight:700;font-size:18px;margin:0 0 6px}
+.dcp-agent-free .af-input{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid rgba(13,26,51,.25);border-radius:10px;background:#fff;color:var(--navy)}
+.dcp-agent-free textarea.af-input{min-height:96px;resize:vertical}
+.dcp-agent-free .af-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.dcp-agent-free .af-chip{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--soft);color:var(--navy);border-radius:999px;padding:7px 12px;cursor:pointer}
+.dcp-agent-free .af-chip[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.dcp-agent-free .af-step{display:flex;gap:14px}
+.dcp-agent-free .af-num{flex:0 0 34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+.dcp-agent-free .af-tip{background:var(--soft);border-left:4px solid var(--tealdk);border-radius:8px;padding:12px 14px;margin-top:10px;font-size:15px}
+.dcp-agent-free .af-tip summary{cursor:pointer;font-weight:700}
+.dcp-agent-free .af-code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:20px;font-weight:700;letter-spacing:.08em;background:var(--soft);border:1px dashed var(--tealdk);border-radius:10px;padding:12px 16px;display:inline-block}
+.dcp-agent-free .af-packet{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;background:var(--soft);border-radius:10px;padding:14px;max-height:240px;overflow:auto;border:1px solid var(--line)}
+.dcp-agent-free .af-ok{color:var(--green);font-weight:700}
+.dcp-agent-free .af-err{color:var(--red);font-weight:700}
+.dcp-agent-free .af-video{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000;margin-bottom:12px}
+.dcp-agent-free .af-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.dcp-agent-free .af-offer{border:2px solid var(--tealdk)}
+.dcp-agent-free .af-list{margin:6px 0 0;padding-left:20px}
+.dcp-agent-free .af-list li{margin:4px 0;font-size:16px}
+.dcp-agent-free .af-hidden{display:none}
+@media(max-width:420px){.dcp-agent-free .af-h1{font-size:25px}.dcp-agent-free .af-hero{padding:24px 18px}.dcp-agent-free .af-btn{width:100%}}
+</style>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is an AI agent?","acceptedAnswer":{"@type":"Answer","text":"An AI agent is a long-running assistant that combines memory of your business, skills for how you like the work done, and the tools you already use, so it can carry out a repeatable task and check in with you before anything goes out."}},
+{"@type":"Question","name":"What does the free agent include?","acceptedAnswer":{"@type":"Answer","text":"A free agent built around one task you choose that runs on its own for a month. If you are new to AI, Development Consulting Partners adds a billion tokens so it can keep running for a few months."}},
+{"@type":"Question","name":"Who is it for?","acceptedAnswer":{"@type":"Answer","text":"Small business owners, people starting a business, working professionals and managers, college students, high school students 18 and older, teachers, coaches, trainers and school staff, and students and parents. Agents are for people 18 and older."}}
+]}
+</script>
+
+<script>
+(function(){
+  // ======================= CONFIG: EDIT BELOW =======================
+  var CONFIG = {
+    // --- Your new agent code (REPLACE before publishing) ---
+    // Full launch: codes are never shown on this page; Salesforce emails the active code (plus the agent message) after sign-up.
+    // Soft launch (softLaunch: true, below): the code shows on screen right after sign-up instead.
+    senderEmail: 'info@developmentconsultingpartners.com', // Who the code email comes from (shown on the "check your email" screen)
+    codeEmailSubject: 'Your free AI agent code',           // Subject line people should look for (must match the Salesforce email template)
+    redeemPath: 'Settings > General > Redeem invite code', // Where people enter the code in the app (must be within 48 hours of creating their account)
+    redeemWindow: '48 hours',                // How long after sign-up the app accepts an invite code
+    appName: 'Muse from Meta',               // The app people install
+    appStoreUrl: 'https://apps.apple.com/us/app/muse-from-meta/id6760173601',  // App Store listing: Muse from Meta (Meta Platforms, Inc.)
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.facebook.aura', // Google Play listing: Muse from Meta (Meta Platforms, Inc.)
+    webUrl: 'https://muse.ai',               // Browser version (for computers). '' hides the "On your computer" option.
+    appRegions: 'Muse is available in the US and Canada.', // Shown under the get-the-app options. '' hides it.
+
+    // --- Links ---
+    bookingUrl: 'https://calendly.com/d/dty-g9n-42r',        // "Or book a call now" link on the I'm-stuck screen
+    reviewUrl: 'https://calendly.com/d/dty-g9n-42r',         // Week-one free 30-minute agent review booking link
+    helpEmail: 'ruby@developmentconsultingpartners.com',     // Where "I'm stuck" requests go if Salesforce capture is off
+    videoYouTubeId: '',                                      // YouTube video ID for the intro clip (e.g. 'dQw4w9WgXcQ'). '' hides the video.
+
+    // --- SOFT LAUNCH (Dorian, 11/23) ---
+    // true = soft launch while Joseph builds the Salesforce emails: the invite code and setup steps show ON SCREEN
+    // right after sign-up, and no automated emails are promised. Sign-ups still create a Lead (Web-to-Lead), which
+    // posts in Slack through the existing New Lead flow. Joseph sets this to false when the code emails go live.
+    softLaunch: true,
+    softCode: 'U1ZVVP',                      // The Muse invite code shown on screen during soft launch. Swap it when the code runs out (30 uses).
+
+    // --- Salesforce Web-to-Lead (sign-up creates a Lead; Salesforce then emails the code) ---
+    sfEnabled: true,                         // true = send to Salesforce; false = open an email instead
+    sfOrgId: '00D4x0000017re9',              // DCP Salesforce org ID (do not change)
+    sfLeadSource: 'Website',                 // Lead Source value stored on the Lead (campaign carries the free-agent detail)
+    sfCampaignId: '',                        // Salesforce Campaign ID for website sign-ups (Joseph fills in). '' = no campaign.
+    sfMessageField: '',                      // Lead custom field ID (00N...) that holds the agent message for the email template. '' = description only.
+    sfPathField: '',                         // Lead custom field ID for the path (Business owner, Teacher...). '' = description only.
+    sfFacebookField: '',                     // Lead custom field ID for a Facebook page URL. Websites go to the standard Website field automatically.
+    sfJobCategoryField: '',                  // Lead custom field ID for the first job's category (Sales, Billing...). Drives the email tips. '' = description only.
+    sfReasonField: '',                       // Lead custom field ID for "Why they signed up" (sign-up reason). '' = description only.
+    sfPlatformField: '',                     // Lead custom field ID for the platform (Muse, ChatGPT, Claude...). '' = description only.
+    sfReferralField: '',                     // Lead custom field ID that stores the person's own Muse invite code. '' = description only.
+
+    // --- Headline and proof (hero) ---
+    kicker: 'Free AI agent',
+    headline: 'Get an AI agent that does real work for you.',
+    subhead: 'Answer a few questions and we’ll build your agent’s instructions in about 8 minutes. Then you set it up, and it starts working.',
+    proof: ['17 agents went live at a single community summit', 'Runs on its own for a month', 'New to AI? A billion tokens on us'],
+
+    // --- The offer card ---
+    offerTitle: 'What you get',
+    spotsNote: 'Free spots are limited and go first come, first served. If they’re gone when you sign up, we’ll put you on the waitlist and email your code as soon as a spot opens.', // Shown under the offer and on the sign-up screen. '' hides it.
+    offerItems: [
+      'An agent built around one task you choose',
+      'It works on its own for a month, and checks with you before anything goes out',
+      'New to AI? We add a billion tokens so it keeps running for a few months',
+      'A free 30-minute agent review with our team after your first week'
+    ],
+
+    // --- "What an agent is" explainer ---
+    explainer: [
+      ['Memory', 'What it knows about you, your business or your classroom.'],
+      ['Skills', 'The steps for a job, done the way you like it done.'],
+      ['Tools', 'Email, calendar, documents and the apps you already use.']
+    ],
+
+    // --- Who are you? Each path has its own questions and example tasks ---
+    paths: [
+      { id:'owner', badge:'B', label:'Business owner', desc:'You run the business. Let an agent handle the busywork.',
+        tasks:[
+          ['Sales','Follow up on quotes, estimates and new leads'],
+          ['Customer service','Answer common customer questions and requests'],
+          ['Marketing','Draft social posts, emails and promotions'],
+          ['Data','Clean up and organize customer lists and reports'],
+          ['CRM','Keep customer records and my sales pipeline up to date'],
+          ['Staffing','Post jobs, screen applicants and schedule interviews'],
+          ['Billing','Send invoices and payment reminders'],
+          ['Training','Build checklists and training guides for my team'],
+          ['Scheduling','Plan my week and book appointments']
+        ],
+        done:{title:'Your agent is working. Let’s make sure it sticks.',body:'After your first week, book a free 30-minute agent review. We’ll look at what your agent did, fix anything that’s off, and pick its next job.',button:'Book my free agent review',noCrm:'No CRM yet? Ask us about the Salesforce Free Suite, a free way to keep every customer and quote in one place that your agent can work from.'},
+        tools:['Gmail','Outlook','Google Calendar','Google Docs/Drive','Excel/Google Sheets','Microsoft 365','Salesforce','HubSpot','QuickBooks','Square','Stripe','Shopify','Jobber','ServiceTitan','Housecall Pro','Calendly','Google Business Profile','Yelp','Facebook','Instagram','LinkedIn','WhatsApp','Text messages (SMS)','Canva','Other','None yet'],
+        goals:['Get hours back each week','Never miss a follow-up','More leads and booked jobs','Get paid faster','Keep customer info organized','Post on social media consistently','Learn to use AI with confidence'],
+        qs:[['name','What’s your first name?','text'],['biz','What’s your business called?','text'],['web','Do you have a website or Facebook page? Share it and your agent will learn what you do from it.','web'],['task','Which jobs should your agent take off your plate? Pick one or more numbers.','pick'],['tools','Which tools do you use today?','tools'],['goal','What would a great first month look like? Pick any that apply.','goals']] },
+      { id:'starting', badge:'S', label:'Starting a business', desc:'Got an idea? Let an agent help you launch it.',
+        tasks:[
+          ['Market research','Research my competitors and who the major players are in my industry'],
+          ['Offer & pricing','Write my offer and set my prices'],
+          ['Business plan','Draft a simple one-page business plan'],
+          ['Branding','Name ideas, tagline and a logo brief'],
+          ['Website','Plan and write my website pages'],
+          ['First customers','Find my first 20 prospects'],
+          ['Social media','Draft posts to build an audience'],
+          ['Launch plan','Plan my first 30 days'],
+          ['Funding','Find grants, loans and local programs'],
+          ['Getting set up','List what I need to register and open for business']
+        ],
+        done:{title:'Your agent is working. Let’s keep your launch moving.',body:'After your first week, book a free 30-minute launch review. We’ll look at what your agent found, sharpen your plan, help you evaluate the information for your next steps, and further train your agent for what comes next.',button:'Book my free launch review'},
+        goals:['Know my market and competitors','Have a clear offer and prices','Get my first paying customer','Launch my website or social pages','Get my business registered','Find funding or a program to join','Have a launch plan I can follow'],
+        whyOpts:['It’s my passion or hobby','I have experience in this field','I see a problem nobody is solving well','I want extra income or a side hustle','I want to be my own boss','I want to help my community','It’s a family business or tradition'],
+        qs:[['name','What’s your first name?','text'],['web','Do you have a website, Facebook page or Instagram for your idea? Share it and your agent will learn from it.','web',{noLabel:'Not yet',descLabel:'In a sentence or two, what’s the idea and who is it for?',descPh:'e.g. Meal-prep delivery for busy nurses in Elgin.',ph:'e.g. yourbrand.com or instagram.com/yourbrand',whatPrefix:'My idea: '}],['task','Which jobs should your agent help with? Pick one or more numbers.','pick'],['why','Why do you want to start a business in this space? Pick any that apply.','goals','whyOpts'],['goal','What would a great first month look like? Pick any that apply.','goals']] },
+      { id:'leader', badge:'W', label:'Working professional or manager', desc:'You work on a team, or lead one, and want time back for the work that matters.',
+        tasks:[
+          ['Meeting prep','Prep me for meetings from my calendar and email'],
+          ['Email','Draft replies and keep my inbox under control'],
+          ['Follow-ups','Track action items and follow-ups after calls'],
+          ['Reports','Draft weekly status reports and summaries'],
+          ['Research','Research accounts, companies or topics before meetings'],
+          ['Team updates','Summarize my team’s weekly updates'],
+          ['Documents','Draft proposals, presentations and docs'],
+          ['Data','Pull numbers into a simple report or dashboard'],
+          ['Planning','Plan my week and priorities']
+        ],
+        tools:['Gmail','Outlook','Google Calendar','Google Docs/Drive','Excel/Google Sheets','Microsoft 365','Salesforce','HubSpot','QuickBooks','Square','Stripe','Shopify','Jobber','ServiceTitan','Housecall Pro','Calendly','Google Business Profile','Yelp','Facebook','Instagram','LinkedIn','WhatsApp','Text messages (SMS)','Canva','Other','None yet'],
+        done:{title:'Your agent is working. Let’s make it part of how you work.',body:'After your first week, book a free 30-minute agent review. We’ll look at what your agent did, fix anything that’s off, and pick its next job.',button:'Book my free agent review',manager:'Want agents for your whole team? Ask us about a team rollout.'},
+        goals:['Walk into every meeting prepared','Never drop a follow-up','Spend less time in email','Get reports done faster','Stay on top of my team’s work','Have more time for the work that matters','Learn to use AI with confidence'],
+        areas:['Sales','Customer service/support','Marketing','Operations','Finance/accounting','HR/people','IT/tech','Admin/office','Project management'],
+        qs:[['name','What’s your first name?','text'],['area','What area do you work in? Pick one.','area'],['resp','Based on your role, what are your 3 most important responsibilities each week or month?','resp'],['company','Where do you work? Both are optional, but they help your agent learn about your company.','company'],['task','Which jobs should your agent take on? Pick one or more numbers.','pick'],['tools','Which tools do you use today?','tools'],['goal','What would a great first month look like? Pick any that apply.','goals']] },
+      { id:'educator', badge:'T', label:'Teacher, coach, trainer or school staff', desc:'You teach, coach or support learners. Let an agent handle lesson prep, parent updates and admin.',
+        pickNote:'Don’t include student names, grades or personal details. Use initials or general descriptions.',
+        tasks:[
+          ['Lesson plans','Draft lesson plans and handouts'],
+          ['Parent updates','Write parent and family emails'],
+          ['Quizzes','Build quizzes and practice from my materials'],
+          ['Feedback','Give first-pass feedback on student work'],
+          ['Learning paths','Create extra practice for students who need more help'],
+          ['Student replies','Draft replies to student questions'],
+          ['Admin','Paperwork, forms and reports'],
+          ['Training materials','Build sessions and handouts for adult learners'],
+          ['Planning','Plan my week and deadlines']
+        ],
+        tools:['Google Classroom','Canvas','Schoology','Microsoft Teams','Google Docs/Drive','Google Slides','Gmail','Outlook','Google Calendar','Microsoft 365','Remind','ClassDojo','Seesaw','Kahoot','Quizlet','Zoom','Canva','PowerSchool/Infinite Campus','Other','None yet'],
+        done:{title:'Your agent is working. Let’s make it fit how you teach.',body:'After your first week, book a free 30-minute agent review. We’ll look at what your agent did, fix anything that’s off, and pick its next job.',button:'Book my free agent review',always:'Want this for your whole school or team? Ask us about a staff session.'},
+        goals:['Spend less time on lesson prep','Keep parents informed without extra hours','Give students faster feedback','Help students who are falling behind','Get on top of admin and paperwork','Get my evenings and weekends back','Learn to use AI with confidence'],
+        roles:['Classroom teacher','Coach','Corporate or workforce trainer','Tutor','Counselor or student support','Administrator or school staff'],
+        levels:['Elementary','Middle school','High school','College','Adults/workforce'],
+        qs:[['name','What’s your first name?','text'],['erole','What’s your role? Pick one.','erole'],['company','Where do you work? Both are optional, but they help your agent learn about your school or organization.','company',{namePh:'School or organization name',webPh:'School or organization website (e.g. yourschool.org)'}],['task','Which jobs should your agent take on? Pick one or more numbers.','pick'],['tools','Which tools do you use today?','tools'],['goal','What would a great first month look like? Pick any that apply.','goals']] },
+      { id:'student', badge:'St', label:'High school student (18+)', desc:'Senior year, organized. Your agent for grades, college applications, scholarships and getting noticed by college coaches.', minorCheck:true,
+        grades:['11th grade','12th grade','Graduated or gap year'],
+        tasks:[
+          ['Grades','Improve my grades in classes where I’m not getting an A'],
+          ['Study materials','Build quizzes and study guides for my toughest classes'],
+          ['Teacher check-ins','Ask my teachers each week for grade updates and extra-credit chances'],
+          ['College search','Research colleges and degrees that fit me'],
+          ['Applications','Plan, track and submit my college applications'],
+          ['Scholarships & grants','Find and apply for scholarships and grants'],
+          ['Coach outreach','Reach out to college coaches, assistant coaches or program directors'],
+          ['Game updates','Send college coaches updates on my games or performances'],
+          ['Highlight videos','Put together highlight or performance videos to share with coaches and colleges'],
+          ['High school coach','Keep my high school coach or director in the loop on my goals'],
+          ['Training & recovery','Plan practice, workouts, rest and recovery to improve my performance'],
+          ['Schedule','Balance classes, practice, work and free time in one weekly schedule'],
+          ['Parent updates','Keep my parents updated on my progress and college search']
+        ],
+        tools:['Google Classroom','Canvas','Schoology','PowerSchool/Infinite Campus','Gmail','Google Docs/Drive','Google Calendar','Common App','Naviance/SCOIR','Hudl','MaxPreps','NCSA','Instagram','X (Twitter)','TikTok','YouTube','CapCut','Quizlet','Khan Academy','Other','None yet'],
+        goals:['Raise my grades','Stay on top of assignments and extra credit','Narrow down my college list','Submit my applications on time','Get noticed by college coaches','Win scholarships or grants','Keep my parents and coaches in the loop','Build my social media presence','Make my first highlight video'],
+        done:{title:'Your agent is working. Let’s keep you on track.',body:'After your first week, book a free 30-minute agent review. We’ll look at what your agent did, fix anything that’s off, and pick its next job, whether that’s grades, applications or coach outreach.',button:'Book my free agent review'},
+        qs:[['name','What’s your first name?','text'],['school','Where are you in school?','school'],['sport','Do you play a sport or do an activity you want to continue in college?','sport'],['task','Which jobs should your agent help with? Pick one or more numbers.','pick'],['classes','Which classes do you want to raise your grade in?','classes'],['tools','Which tools do you use today?','tools'],['social','Do you have social media accounts?','social'],['goal','What would a great first month look like? Pick any that apply.','goals']] },
+      { id:'college', badge:'C', label:'College student', desc:'From GPA to first job. Your agent for classes, career, training and money, with the internships to get there.',
+        cgrades:['Freshman','Sophomore','Junior','Senior','Grad student'],
+        tasks:[
+          ['Grades','Improve my grades and build study plans for tough classes'],
+          ['Study materials','Quizzes, flashcards and study guides from my notes'],
+          ['Professor check-ins','Draft emails to professors about grades, office hours and extra help'],
+          ['Assignments & deadlines','Track due dates across all my classes'],
+          ['Major & career','Research majors, careers and what each pays'],
+          ['Internships & jobs','Find internships and part-time jobs, and draft applications'],
+          ['Resume & LinkedIn','Build my resume and LinkedIn profile'],
+          ['Scholarships & aid','Find scholarships and keep up with financial aid deadlines'],
+          ['Transfer or grad school','Research programs and plan applications'],
+          ['College athletics','Walk-ons, and transfers already in the transfer portal: keep coaches updated and promote myself'],
+          ['Training & recovery','Plan practice, workouts, rest and recovery to improve my performance'],
+          ['Schedule','Balance classes, practice, work and free time in one weekly schedule'],
+          ['Budgeting','Track my spending and stick to a student budget'],
+          ['Networking','Draft outreach to alumni and professionals'],
+          ['Parent updates','Keep my parents updated on my progress']
+        ],
+        tools:['Canvas','Blackboard','Moodle','D2L Brightspace','Google Classroom','Gmail','Outlook','Microsoft Teams','Google Docs/Drive','Microsoft 365','Google Calendar','Handshake','LinkedIn','Notion','Quizlet','Chegg','Hudl','Instagram','TikTok','Rocket Money','YNAB','Venmo','Cash App','Apple Health','Strava','WHOOP','Other','None yet'],
+        goals:['Raise my GPA','Never miss a deadline','Land an internship or job','Pick my major or career path','Build my resume and LinkedIn','Win scholarships or aid','Transfer or get into grad school','Stay on top of training and recovery','Get my schedule under control','Stick to a budget','Keep my parents in the loop'],
+        athleteGoals:['Get noticed by college coaches (walk-on or transfer)','Make my first highlight video'],
+        done:{title:'Your agent is working. Let’s keep you on track.',body:'After your first week, book a free 30-minute agent review. We’ll look at what your agent did, fix anything that’s off, and pick its next job, whether that’s grades, internships or your career plan.',button:'Book my free agent review'},
+        qs:[['name','What’s your first name?','text'],['cschool','Where are you in college?','cschool'],['athlete','Are you a college athlete?','athlete'],['task','Which jobs should your agent help with? Pick one or more numbers.','pick'],['classes','Which classes do you want to raise your grade in?','classes'],['tools','Which tools do you use today?','tools'],['social','Do you have social media accounts?','social'],['goal','What would a great first month look like? Pick any that apply.','goals']] },
+      { id:'parent', badge:'P', label:'Parent or family', desc:'Run the household. Let an agent handle calendars, meals, budgets, school deadlines and the family to-do list.',
+        tasks:[
+          ['Family calendar','One calendar for school, practices, appointments and work'],
+          ['Meals','Weekly meal plans and grocery lists'],
+          ['Budget','Track household spending and bills'],
+          ['School dates','School deadlines, events and forms'],
+          ['Sports & activities','Practice and game schedules, carpools, sign-ups and fees'],
+          ['College planning','Help with my student’s college search, visits, deadlines and costs'],
+          ['Chores & to-dos','The family to-do list and chore chart'],
+          ['Appointments','Doctor, dentist, vet and car appointments and reminders'],
+          ['Caregiving','Appointments and to-dos for an aging parent'],
+          ['Trips & events','Plan trips, birthdays and holidays'],
+          ['Home','Maintenance reminders and finding service pros']
+        ],
+        goals:['Everyone knows the weekly schedule','No more missed practices, games or appointments','Dinner planned without the nightly scramble','Stay on budget and pay bills on time','Never miss a school deadline or form','Help my kids improve their grades and keep up with homework','Split chores and to-dos fairly','My spouse or partner and I are on the same page','Get my evenings and weekends back','Learn to use AI with confidence'],
+        done:{title:'Your agent is working. Let’s get the whole household on board.',body:'After your first week, book a free 30-minute agent review. We’ll look at what your agent did, fix anything that’s off, and pick its next job. Bring your spouse or partner and we’ll set them up too.',button:'Book my free agent review'},
+        qs:[['name','What’s your first name?','text'],['household','Who’s in your household? Tap all that apply.','household'],['task','Which jobs should your agent help with? Pick one or more numbers.','pick'],['ptools','Which email and calendar do you use?','ptools'],['track','What’s the most important thing you need to keep track of? Pick one.','track'],['goal','What would a great first month look like? Pick any that apply.','goals']] }
+    ],
+    toolOptions: ['Gmail','Outlook','Google Calendar','Google Docs/Drive','Microsoft 365','Salesforce','HubSpot','QuickBooks','Facebook','Instagram','LinkedIn','Canva','None yet'],
+
+    // --- Setup steps (one per screen). Each step has a "Stuck?" tip. ---
+    steps: [
+      { title:'Get the app and sign up', body:'On your phone, download {app}. On your computer, open it in your browser. Then create your account. You must be 18 or older.',
+        tip:'It asks for a card even on the free plan. That’s the app’s sign-up rule, not a charge from us. If you’d rather not add a card, book a call and we’ll set your agent up another way. {app} is only available in the US and Canada.' },
+      { title:'Redeem your code', body:'Open the email from {sender} (subject: “{subject}”) and copy your code. In {app}, go to {redeem} and enter it. {app} confirms your free tokens on that screen. Do this within {window} of creating your account.',
+        tip:'No email yet? Check your spam or promotions folder. Code not accepted? Check that you typed all 6 characters exactly and that it’s been less than {window} since you created your account. Still stuck? Tell us at the end and we’ll send a fresh code.' },
+      { title:'Copy your agent message', body:'Tap “Copy my agent message” below, or use the same button in your email. It’s your agent’s instructions, written from your answers.',
+        tip:'On a phone, press and hold inside the app’s message box, then tap Paste. On a computer, press Ctrl+V (Cmd+V on a Mac). If nothing pastes, tap “Show message” and copy it by hand.' },
+      { title:'Paste it and send', body:'In {app}, start a new chat, paste the whole message and send it. Your agent’s first reply starts with “I’m set up. Here’s what I’ll do first.”',
+        tip:'No reply like that? Paste the whole message again in one go. Sending only part of it is the most common reason setup fails.' },
+      { title:'Give it its first job', body:'Your agent will ask a couple of questions, then start on the task you chose. Check in for 10 minutes each evening and approve anything before it goes out.',
+        tip:'If it doesn’t start, send: “Start my first job: [your task].” Still stuck? Use the button below and we’ll help.' }
+    ],
+    // Soft-launch versions of steps 2 and 3 (used only when softLaunch is true; key = step number - 1).
+    softSteps: { 1:{ title:'Redeem your code', body:'Your code is {code}. In {app}, go to {redeem} and enter it. {app} confirms your free tokens on that screen. Do this within {window} of creating your account.',
+        tip:'Code not accepted? Check that you typed all 6 characters exactly and that it’s been less than {window} since you created your account. Still stuck? Tell us at the end and we’ll send a fresh code within 1 business day.' },
+      2:{ title:'Copy your agent message', body:'Tap “Copy my agent message” below. It’s your agent’s instructions, written from your answers.',
+        tip:'On a phone, press and hold inside the app’s message box, then tap Paste. On a computer, press Ctrl+V (Cmd+V on a Mac). If nothing pastes, tap “Show message” and copy it by hand.' } },
+    // --- Where the agent lives. Muse gets free tokens from DCP; the others use the person's own app, no credits. ---
+    // Menu names are current as of Nov 2026. Check each one before launch; apps rename menus often.
+    platformQuestion: 'Are you new to AI, or do you already use an AI app regularly?',
+    newToAiTitle: 'I’m new to AI',
+    newToAiBody: 'We’ll set you up on a free agent app and cover the tokens, so your agent keeps working on its own for months.',
+    ownAiTitle: 'I already use an AI app',
+    ownAiBody: 'Pick the one you use most and we’ll send setup steps for it. No credits needed.',
+    platforms: [
+      { id:'ChatGPT', url:'https://chatgpt.com', steps:[
+        ['Open ChatGPT and sign in','Use the ChatGPT app or go to chatgpt.com.'],
+        ['Create a project for your agent','In the sidebar, choose New project and name it after your agent. Open the project’s settings and paste your agent message into its instructions. No Projects on your plan? Paste the message into a new chat instead.'],
+        ['Start the first job','Open a chat inside the project and send: “Start my first job.” If your plan offers scheduled tasks, ask it to schedule your evening summary.'] ]},
+      { id:'Claude', url:'https://claude.ai', steps:[
+        ['Open Claude and sign in','Use the Claude app or go to claude.ai.'],
+        ['Create a project for your agent','Go to Projects, create a new project and name it after your agent. Paste your agent message into the project instructions.'],
+        ['Start the first job','Start a chat in that project and send: “Start my first job.”'] ]},
+      { id:'Gemini', url:'https://gemini.google.com', steps:[
+        ['Open Gemini and sign in','Use the Gemini app or go to gemini.google.com.'],
+        ['Make a Gem for your agent','Open Gems, choose New Gem, name it, and paste your agent message into its instructions. Save it.'],
+        ['Start the first job','Open your Gem and send: “Start my first job.”'] ]},
+      { id:'Copilot', url:'https://copilot.microsoft.com', steps:[
+        ['Open Copilot and sign in','Use the Copilot app or go to copilot.microsoft.com. At work, use Microsoft 365 Copilot.'],
+        ['Give it your agent message','Paste your agent message into a new chat. With Microsoft 365 Copilot, you can create an agent instead and paste the message into its instructions so it remembers them.'],
+        ['Start the first job','Send: “Start my first job.”'] ]},
+      { id:'Perplexity', url:'https://www.perplexity.ai', steps:[
+        ['Open Perplexity and sign in','Use the Perplexity app or go to perplexity.ai.'],
+        ['Create a Space for your agent','Create a new Space, name it after your agent, and paste your agent message into the Space’s instructions.'],
+        ['Start the first job','Ask your first question inside the Space: “Start my first job.”'] ]},
+      { id:'Cursor', url:'https://cursor.com', steps:[
+        ['Install Cursor and sign in','Download Cursor from cursor.com. It works best when your agent’s job involves code or files on your computer.'],
+        ['Save your agent message as a rule','Open Cursor Settings, go to Rules, and add your agent message as a rule so every chat follows it.'],
+        ['Start the first job','Open the chat panel and send: “Start my first job.”'] ]},
+      { id:'Grok', url:'https://grok.com', steps:[
+        ['Open Grok and sign in','Use the Grok app or go to grok.com.'],
+        ['Give it your agent message','Save your agent message in Grok’s custom instructions (under Settings, Customize), or paste it into a new chat.'],
+        ['Start the first job','Send: “Start my first job.”'] ]},
+      { id:'Other', url:'', steps:[
+        ['Open your AI app and sign in','Use the app you already work in every day.'],
+        ['Give it your agent message','If your app has projects, custom instructions, Gems, Spaces or agents, paste your agent message there so it remembers it. Otherwise paste it into a new chat.'],
+        ['Start the first job','Send: “Start my first job.”'] ]}
+    ],
+    // --- "What made you want an agent?" (asked on the sign-up screen; stored on the Lead) ---
+    signupReasons: ['Save time on repetitive work','Get more customers or sales','Stay on top of follow-ups','Get my household organized','Do better in school and plan what’s next','Help with teaching or training','Run my team better','Learn how AI agents work','Something else'],
+    stuckReasons: ['My code email didn’t arrive','The app wanted a card','I couldn’t find the app','Pasting didn’t work','The code didn’t work','The agent didn’t start','Something else'],
+
+    // --- Under-18 path ---
+    minorMessage: '', // Not used: agents are for people 18 and older only (Dorian, 11/22).
+
+    // --- Final screen ---
+    doneTitle: 'You’re set. Your agent is working.',
+    doneBody: 'Want help picking its next job, or building one for your team? Book a free 30-minute agent review.'
+  };
+  // ==================== DO NOT EDIT BELOW THIS LINE ====================
+
+  function init(root){
+    var S={path:null,a:{},i:0,step:0,minor:false,tools:[],task:''};
+    function h(tag,cls,html){var e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e;}
+    function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+    function btn(label,cls,fn){var b=h('button','af-btn '+cls,esc(label));b.type='button';b.addEventListener('click',fn);return b;}
+    function SOFT(){return !!CONFIG.softLaunch;}
+    function app(s){return s.replace(/\{code\}/g,esc(CONFIG.softCode||'')).replace(/\{app\}/g,esc(CONFIG.appName)).replace(/\{sender\}/g,esc(CONFIG.senderEmail)).replace(/\{subject\}/g,esc(CONFIG.codeEmailSubject)).replace(/\{redeem\}/g,esc(CONFIG.redeemPath)).replace(/\{window\}/g,esc(CONFIG.redeemWindow));}
+    function render(nodes){root.innerHTML='';nodes.forEach(function(n){root.appendChild(n);});var f=root.querySelector('input,textarea,button');if(f&&S.focus){f.focus();}S.focus=true;root.scrollIntoView({block:'nearest'});}
+    function hero(){var d=h('div','af-hero');d.appendChild(h('p','af-kicker',esc(CONFIG.kicker)));d.appendChild(h('h2','af-h1',esc(CONFIG.headline)));d.appendChild(h('p','af-p',esc(CONFIG.subhead)));var p=h('div','af-proof');CONFIG.proof.forEach(function(x){p.appendChild(h('span','af-pill',esc(x)));});d.appendChild(p);return d;}
+
+    function device(){var u=navigator.userAgent||'';if(/iPhone|iPad|iPod/i.test(u)||(/Macintosh/.test(u)&&'ontouchend' in document))return 'ios';if(/Android/i.test(u))return 'android';return 'desktop';}
+    function link(label,cls,url){var a=h('a','af-btn '+cls,esc(label));a.href=url;a.target='_blank';a.rel='noopener';return a;}
+    function getApp(title){
+      var d=device(),phone=d!=='desktop';var c=h('div','af-card');c.appendChild(h('h3','af-h2',esc(title)));
+      var g=h('div','af-grid af-2');
+      var m=h('div','af-device'+(phone?' af-here':''));var mt=h('p','af-h3','On your phone');if(phone)mt.innerHTML+='<span class="af-heretag">You’re here</span>';m.appendChild(mt);
+      m.appendChild(h('p','af-p af-muted','Use the app. Download '+esc(CONFIG.appName)+', then sign up.'));
+      var mn=h('div','af-nav');
+      mn.appendChild(link('App Store',d==='ios'?'af-btn-primary':'af-btn-ghost',CONFIG.appStoreUrl));
+      mn.appendChild(link('Google Play',d==='android'?'af-btn-primary':'af-btn-ghost',CONFIG.playStoreUrl));
+      m.appendChild(mn);g.appendChild(m);
+      if(CONFIG.webUrl){var w=h('div','af-device'+(!phone?' af-here':''));var wt=h('p','af-h3','On your computer');if(!phone)wt.innerHTML+='<span class="af-heretag">You’re here</span>';w.appendChild(wt);
+        w.appendChild(h('p','af-p af-muted','No download needed. Go to '+esc(CONFIG.webUrl.replace(/^https?:\/\//,''))+' and sign up in your browser.'));
+        var wn=h('div','af-nav');wn.appendChild(link('Open '+CONFIG.webUrl.replace(/^https?:\/\//,''),!phone?'af-btn-primary':'af-btn-ghost',CONFIG.webUrl));w.appendChild(wn);g.appendChild(w);}
+      c.appendChild(g);if(CONFIG.appRegions)c.appendChild(h('p','af-muted',esc(CONFIG.appRegions)));return c;
+    }
+
+    function home(){
+      var out=[hero()];
+      if(CONFIG.videoYouTubeId){var v=h('div','af-video');v.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(CONFIG.videoYouTubeId)+'" title="Intro video" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>';out.push(v);}
+      var o=h('div','af-card af-offer');o.appendChild(h('h3','af-h2',esc(CONFIG.offerTitle)));var ul=h('ul','af-list');CONFIG.offerItems.forEach(function(x){ul.appendChild(h('li',null,esc(x)));});o.appendChild(ul);if(CONFIG.spotsNote)o.appendChild(h('p','af-muted',esc(CONFIG.spotsNote)));out.push(o);
+      var ex=h('div','af-card');ex.appendChild(h('h3','af-h2','What an agent is'));var g=h('div','af-grid af-3');CONFIG.explainer.forEach(function(x){var c=h('div');c.appendChild(h('p','af-h3',esc(x[0])));c.appendChild(h('p','af-p af-muted',esc(x[1])));g.appendChild(c);});ex.appendChild(g);out.push(ex);
+      var pk=h('div','af-card');pk.appendChild(h('h3','af-h2','Which best describes you?'));var grid=h('div','af-grid af-2');
+      CONFIG.paths.forEach(function(p){var b=h('button','af-choice');b.type='button';b.setAttribute('aria-pressed','false');b.innerHTML='<span class="af-badge" aria-hidden="true">'+esc(p.badge)+'</span><span><span class="af-h3" style="display:block">'+esc(p.label)+'</span><span class="af-muted">'+esc(p.desc)+'</span></span>';b.addEventListener('click',function(){S.path=p;S.a={};S.i=0;S.plat=null;S.reason='';S.noweb=false;S.tools=[];S.task='';S.minor=false;p.minorCheck?ageCheck():question();});grid.appendChild(b);});
+      pk.appendChild(grid);pk.appendChild(h('p','af-muted','Your answers stay in your browser. Nothing is sent unless you ask us for help at the end.'));out.push(pk);
+      S.focus=false;render(out);
+    }
+
+    function ageCheck(){
+      var c=h('div','af-card');c.appendChild(h('p','af-label','Are you 18 or older?'));var g=h('div','af-grid af-2');
+      g.appendChild(btn('Yes, 18 or older','af-btn-ghost',function(){S.minor=false;question();}));
+      g.appendChild(btn('No, under 18','af-btn-ghost',function(){var d=h('div','af-card af-offer');d.appendChild(h('p','af-h3','Sorry, our agents are only for people 18 and older.'));var n2=h('div','af-nav');n2.appendChild(btn('Back to the start','af-btn-ghost',home));d.appendChild(n2);render([d]);}));
+      c.appendChild(g);var n=h('div','af-nav');n.appendChild(btn('Back','af-btn-ghost',home));c.appendChild(n);render([c]);
+    }
+
+    function question(){
+      var p=S.path,qs=p.qs,q=qs[S.i];var c=h('div','af-card');
+      var pr=h('div','af-progress');pr.innerHTML='<span style="width:'+Math.round(S.i/qs.length*100)+'%"></span>';c.appendChild(pr);
+      c.appendChild(h('p','af-muted',esc(p.label)+' · Question '+(S.i+1)+' of '+qs.length));
+      var id='afq'+Math.random().toString(36).slice(2,8);var lab=h('label','af-label',esc(q[1]));lab.setAttribute('for',id);c.appendChild(lab);
+      var inp;
+      if(q[2]==='web'){
+        inp=h('input','af-input');inp.id=id;inp.type='text';inp.setAttribute('inputmode','url');var W=q[3]||{};inp.placeholder=W.ph||'e.g. yourbusiness.com or facebook.com/yourpage';inp.value=S.a.web||'';c.appendChild(inp);
+        var nw=h('button','af-chip',esc(W.noLabel||'I don’t have a website or Facebook page'));nw.type='button';nw.style.marginTop='10px';nw.setAttribute('aria-pressed',S.noweb?'true':'false');c.appendChild(nw);
+        var wd=h('div',S.noweb?'':'af-hidden');var wid='afw'+Math.random().toString(36).slice(2,8);var wl=h('label','af-label',esc(W.descLabel||'In a sentence or two, what does your business do, and who are your customers?'));wl.setAttribute('for',wid);wl.style.fontSize='16px';wl.style.marginTop='14px';
+        var wt=h('textarea','af-input');wt.id=wid;wt.placeholder=W.descPh||'e.g. We pressure wash commercial buildings and parking lots for businesses in southeast Kansas.';wt.value=S.a.what||'';wd.appendChild(wl);wd.appendChild(wt);c.appendChild(wd);
+        nw.addEventListener('click',function(){msg.classList.add('af-hidden');S.noweb=!S.noweb;nw.setAttribute('aria-pressed',S.noweb?'true':'false');wd.classList.toggle('af-hidden',!S.noweb);if(S.noweb)wt.focus();});
+        inp.addEventListener('input',function(){if(inp.value.trim()&&S.noweb){S.noweb=false;nw.setAttribute('aria-pressed','false');wd.classList.add('af-hidden');}});
+      } else if(q[2]==='pick'){
+        lab.removeAttribute('for');c.appendChild(h('p','af-muted','Tap as many as you like. Your agent starts with the first one you pick.'));if(p.pickNote){var pn=h('p','af-p');pn.style.fontWeight='700';pn.style.color='var(--tealdk)';pn.textContent=p.pickNote;c.appendChild(pn);}
+        var list=h('div','af-grid');var other=null,ot=null;S.a.taskPicks=S.a.taskPicks||[];
+        var opts=p.tasks.concat([['Something else','Type your own job']]),last=opts.length-1;
+        function mark(){[].forEach.call(list.children,function(x,k){var on=S.a.taskPicks.indexOf(k)>-1;x.setAttribute('aria-pressed',on?'true':'false');var tag=x.querySelector('.af-heretag');if(tag)tag.parentNode.removeChild(tag);if(on&&S.a.taskPicks[0]===k){var t=h('span','af-heretag','Starts here');x.lastChild.appendChild(t);}});other.classList.toggle('af-hidden',S.a.taskPicks.indexOf(last)<0);}
+        opts.forEach(function(t,k){var b=h('button','af-pick');b.type='button';
+          b.innerHTML='<span class="af-badge" aria-hidden="true">'+(k+1)+'</span><span><strong>'+esc(t[0])+'</strong><span class="af-muted"> · '+esc(t[1])+'</span></span>';
+          b.addEventListener('click',function(){var at=S.a.taskPicks.indexOf(k);if(at>-1)S.a.taskPicks.splice(at,1);else S.a.taskPicks.push(k);msg.classList.add('af-hidden');mark();if(k===last&&S.a.taskPicks.indexOf(last)>-1)ot.focus();});
+          list.appendChild(b);});
+        c.appendChild(list);
+        other=h('div','af-hidden');ot=h('input','af-input');ot.type='text';ot.placeholder='Describe the job in a few words';ot.value=S.a.taskOther||'';other.appendChild(ot);c.appendChild(other);mark();
+        inp={value:''};
+        inp.getVal=function(){S.a.taskOther=ot.value.trim();var out=[];for(var x=0;x<S.a.taskPicks.length;x++){var k=S.a.taskPicks[x];if(k===last){if(!S.a.taskOther)return null;out.push(S.a.taskOther);}else out.push(opts[k][0]+': '+opts[k][1]);}return out;};
+      } else if(q[2]==='area'){
+        lab.removeAttribute('for');var al=h('div','af-grid'),aopts=p.areas.concat(['Something else']),alast=aopts.length-1;
+        var aoth=h('div',S.a.areaPick===alast?'':'af-hidden'),aot=h('input','af-input');aot.type='text';aot.placeholder='What area do you work in?';aot.value=S.a.areaOther||'';aoth.appendChild(aot);
+        aopts.forEach(function(t,k){var b=h('button','af-pick');b.type='button';b.setAttribute('aria-pressed',S.a.areaPick===k?'true':'false');b.innerHTML='<span class="af-badge" aria-hidden="true">'+(k+1)+'</span><span><strong>'+esc(t)+'</strong></span>';
+          b.addEventListener('click',function(){S.a.areaPick=k;[].forEach.call(al.children,function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');msg.classList.add('af-hidden');aoth.classList.toggle('af-hidden',k!==alast);if(k===alast)aot.focus();});al.appendChild(b);});
+        c.appendChild(al);c.appendChild(aoth);
+        c.appendChild(h('p','af-label','Do you manage people?'));c.lastChild.style.fontSize='16px';c.lastChild.style.marginTop='14px';
+        var mg=h('div','af-chips');['Yes','No'].forEach(function(t){var ch=h('button','af-chip',t);ch.type='button';ch.setAttribute('aria-pressed',S.a.manages===t?'true':'false');ch.addEventListener('click',function(){S.a.manages=t;[].forEach.call(mg.children,function(x){x.setAttribute('aria-pressed','false');});ch.setAttribute('aria-pressed','true');msg.classList.add('af-hidden');});mg.appendChild(ch);});c.appendChild(mg);
+        inp={value:''};inp.getVal=function(){S.a.areaOther=aot.value.trim();if(S.a.areaPick==null)return '';if(S.a.areaPick===alast)return S.a.areaOther;return aopts[S.a.areaPick];};
+      } else if(q[2]==='resp'){
+        lab.removeAttribute('for');c.appendChild(h('p','af-muted','A few words each is plenty. Your agent will focus on helping with these.'));
+        var rs=S.a.respList||['','',''],ri=[],rph=['e.g. Weekly pipeline review with my reps','e.g. Monthly report to leadership','e.g. Onboarding new customers'];
+        for(var r=0;r<3;r++){var row=h('div');row.style.display='flex';row.style.alignItems='center';row.style.gap='10px';row.style.marginTop=r?'10px':'0';
+          row.appendChild(h('span','af-badge',String(r+1)));var ip=h('input','af-input');ip.type='text';ip.placeholder=rph[r];ip.value=rs[r]||'';ip.setAttribute('aria-label','Responsibility '+(r+1));ip.style.flex='1';ip.addEventListener('input',function(){msg.classList.add('af-hidden');});row.appendChild(ip);ri.push(ip);c.appendChild(row);}
+        inp={value:''};inp.getVal=function(){S.a.respList=ri.map(function(x){return x.value.trim();});return S.a.respList.filter(function(x){return x;});};
+      } else if(q[2]==='erole'){
+        lab.removeAttribute('for');var el=h('div','af-grid'),eopts=p.roles.concat(['Something else']),elast=eopts.length-1;
+        var eoth=h('div',S.a.rolePick===elast?'':'af-hidden'),eot=h('input','af-input');eot.type='text';eot.placeholder='What’s your role?';eot.value=S.a.roleOther||'';eoth.appendChild(eot);
+        eopts.forEach(function(t,k){var b=h('button','af-pick');b.type='button';b.setAttribute('aria-pressed',S.a.rolePick===k?'true':'false');b.innerHTML='<span class="af-badge" aria-hidden="true">'+(k+1)+'</span><span><strong>'+esc(t)+'</strong></span>';
+          b.addEventListener('click',function(){S.a.rolePick=k;[].forEach.call(el.children,function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');msg.classList.add('af-hidden');eoth.classList.toggle('af-hidden',k!==elast);if(k===elast)eot.focus();});el.appendChild(b);});
+        c.appendChild(el);c.appendChild(eoth);
+        var lv=h('p','af-label','Who do you work with? Tap all that apply.');lv.style.fontSize='16px';lv.style.marginTop='14px';c.appendChild(lv);
+        S.a.levelPicks=S.a.levelPicks||[];var lch=h('div','af-chips');p.levels.forEach(function(t){var ch=h('button','af-chip',esc(t));ch.type='button';ch.setAttribute('aria-pressed',S.a.levelPicks.indexOf(t)>-1?'true':'false');ch.addEventListener('click',function(){var k=S.a.levelPicks.indexOf(t);if(k>-1)S.a.levelPicks.splice(k,1);else S.a.levelPicks.push(t);ch.setAttribute('aria-pressed',k>-1?'false':'true');msg.classList.add('af-hidden');});lch.appendChild(ch);});c.appendChild(lch);
+        var sid='afs'+Math.random().toString(36).slice(2,8),sl=h('label','af-label','Subject or program <span class="af-muted">(optional)</span>');sl.setAttribute('for',sid);sl.style.fontSize='16px';sl.style.marginTop='14px';c.appendChild(sl);
+        var sj=h('input','af-input');sj.id=sid;sj.type='text';sj.placeholder='e.g. 8th-grade science at Kimball Middle School';sj.value=S.a.subject||'';c.appendChild(sj);
+        inp={value:''};inp.getVal=function(){S.a.roleOther=eot.value.trim();S.a.subject=sj.value.trim();if(S.a.rolePick==null)return '';if(S.a.rolePick===elast)return S.a.roleOther;return eopts[S.a.rolePick];};
+      } else if(q[2]==='school'){
+        lab.removeAttribute('for');var sg=h('div','af-chips');p.grades.forEach(function(t){var ch=h('button','af-chip',esc(t));ch.type='button';ch.setAttribute('aria-pressed',S.a.grade===t?'true':'false');ch.addEventListener('click',function(){S.a.grade=t;[].forEach.call(sg.children,function(x){x.setAttribute('aria-pressed','false');});ch.setAttribute('aria-pressed','true');msg.classList.add('af-hidden');});sg.appendChild(ch);});c.appendChild(sg);
+        var scn=h('input','af-input');scn.type='text';scn.placeholder='School name (optional)';scn.setAttribute('aria-label','School name');scn.value=S.a.biz||'';scn.style.marginTop='12px';c.appendChild(scn);
+        var gy=h('input','af-input');gy.type='text';gy.setAttribute('inputmode','numeric');gy.placeholder='Graduation year (optional, e.g. 2027)';gy.setAttribute('aria-label','Graduation year');gy.value=S.a.gradYear||'';gy.style.marginTop='10px';c.appendChild(gy);
+        var gpa=h('input','af-input');gpa.type='text';gpa.setAttribute('inputmode','decimal');gpa.placeholder='Current GPA (optional, e.g. 3.2)';gpa.setAttribute('aria-label','Current GPA');gpa.value=S.a.gpa||'';gpa.style.marginTop='10px';c.appendChild(gpa);
+        var stl=h('label','af-label','What do you want to study? <span class="af-muted">(optional)</span>');stl.style.fontSize='16px';stl.style.marginTop='14px';var stid='afst'+Math.random().toString(36).slice(2,8);stl.setAttribute('for',stid);c.appendChild(stl);
+        var stu=h('input','af-input');stu.id=stid;stu.type='text';stu.placeholder='e.g. Nursing, business, undecided';stu.value=S.a.study||'';c.appendChild(stu);
+        var wl=h('p','af-label','Where do you want to go to school?');wl.style.fontSize='16px';wl.style.marginTop='14px';c.appendChild(wl);
+        var wch=h('div','af-chips');['Close to home','Anywhere in my state','Anywhere in the U.S.','Not sure yet'].forEach(function(t){var ch=h('button','af-chip',esc(t));ch.type='button';ch.setAttribute('aria-pressed',S.a.where===t?'true':'false');ch.addEventListener('click',function(){S.a.where=t;[].forEach.call(wch.children,function(x){x.setAttribute('aria-pressed','false');});ch.setAttribute('aria-pressed','true');});wch.appendChild(ch);});c.appendChild(wch);
+        inp={value:''};inp.getVal=function(){S.a.biz=scn.value.trim();S.a.gradYear=gy.value.trim();S.a.gpa=gpa.value.trim();S.a.study=stu.value.trim();return S.a.grade||'';};
+      } else if(q[2]==='sport'){
+        lab.removeAttribute('for');var sy=h('div','af-chips'),sbox=h('div',S.a.plays==='Yes'?'':'af-hidden');
+        var SPORTS=['Basketball','Football','Baseball','Softball','Soccer','Volleyball','Track & field','Cross country','Wrestling','Swimming','Tennis','Golf','Lacrosse','Hockey','Cheer'],ACTS=['Band','Choir','Orchestra','Theater','Dance','Debate or speech','Robotics','Student government','A club','Other'];
+        S.a.acts=S.a.acts||[];
+        ['Yes','No'].forEach(function(t){var ch=h('button','af-chip',t);ch.type='button';ch.setAttribute('aria-pressed',S.a.plays===t?'true':'false');ch.addEventListener('click',function(){S.a.plays=t;[].forEach.call(sy.children,function(x){x.setAttribute('aria-pressed','false');});ch.setAttribute('aria-pressed','true');msg.classList.add('af-hidden');sbox.classList.toggle('af-hidden',t!=='Yes');});sy.appendChild(ch);});c.appendChild(sy);
+        function sub(t){var x=h('p','af-label',t);x.style.fontSize='16px';x.style.marginTop='14px';sbox.appendChild(x);return x;}
+        function opt(ph,lab,val){var x=h('input','af-input');x.type='text';x.placeholder=ph;x.setAttribute('aria-label',lab);x.value=val||'';x.style.marginTop='10px';sbox.appendChild(x);return x;}
+        var lvWrap=h('div');
+        function anySport(){return S.a.acts.some(function(a){return SPORTS.indexOf(a)>-1;});}
+        function refresh(){lvWrap.classList.toggle('af-hidden',!anySport());othr.classList.toggle('af-hidden',S.a.acts.indexOf('Other')<0&&S.a.acts.indexOf('A club')<0);}
+        function chipGroup(list){var g=h('div','af-chips');list.forEach(function(t){var ch=h('button','af-chip',esc(t));ch.type='button';ch.setAttribute('aria-pressed',S.a.acts.indexOf(t)>-1?'true':'false');ch.addEventListener('click',function(){var k=S.a.acts.indexOf(t);if(k>-1)S.a.acts.splice(k,1);else S.a.acts.push(t);ch.setAttribute('aria-pressed',k>-1?'false':'true');msg.classList.add('af-hidden');refresh();});g.appendChild(ch);});sbox.appendChild(g);}
+        sub('Sports');chipGroup(SPORTS);sub('Activities');chipGroup(ACTS);
+        var othr=opt('Which club or activity?','Other activity',S.a.actOther);
+        var pos=opt('Position, event, instrument or role (optional)','Position',S.a.position);
+        var hl=opt('Link to highlights, performances or a portfolio, like Hudl, MaxPreps or YouTube (optional)','Highlights link',S.a.highlights);hl.setAttribute('inputmode','url');
+        var prl=sub('Do you need help promoting yourself to colleges?');
+        var prc=h('div','af-chips');['I have highlight videos. Help me share them','I need help creating highlight videos','Help me with both','No thanks'].forEach(function(t){var ch=h('button','af-chip',esc(t));ch.type='button';ch.setAttribute('aria-pressed',S.a.promo===t?'true':'false');ch.addEventListener('click',function(){S.a.promo=t;[].forEach.call(prc.children,function(x){x.setAttribute('aria-pressed','false');});ch.setAttribute('aria-pressed','true');});prc.appendChild(ch);});sbox.appendChild(prc);
+        var lvl=h('p','af-label','For your sport, what level are you aiming for?');lvl.style.fontSize='16px';lvl.style.marginTop='14px';lvWrap.appendChild(lvl);
+        var lvc=h('div','af-chips');['D1','D2','D3','NAIA','Junior college','Not sure'].forEach(function(t){var ch=h('button','af-chip',esc(t));ch.type='button';ch.setAttribute('aria-pressed',S.a.level===t?'true':'false');ch.addEventListener('click',function(){S.a.level=t;[].forEach.call(lvc.children,function(x){x.setAttribute('aria-pressed','false');});ch.setAttribute('aria-pressed','true');});lvc.appendChild(ch);});lvWrap.appendChild(lvc);sbox.appendChild(lvWrap);
+        var club=opt('Club, travel team or outside group (optional)','Club team',S.a.club),stats=opt('Key stats, awards or achievements (optional, e.g. 18 ppg, all-state band)','Key stats',S.a.stats);
+        var hcl=sub('Your high school coach or director');hcl.innerHTML+=' <span class="af-muted">(optional, so your agent can draft updates to them)</span>';
+        var hcn=opt('Coach or director’s name','Coach name',S.a.coachName),hce=opt('Coach or director’s email','Coach email',S.a.coachEmail);hce.type='email';
+        c.appendChild(sbox);refresh();
+        inp={value:''};inp.getVal=function(){S.a.actOther=othr.value.trim();var list=S.a.acts.filter(function(x){return x!=='Other'&&x!=='A club';});if(S.a.actOther)list.push(S.a.actOther);S.a.sport=list.join(', ');S.a.isSport=anySport();S.a.position=pos.value.trim();S.a.highlights=hl.value.trim();S.a.club=club.value.trim();S.a.stats=stats.value.trim();S.a.coachName=hcn.value.trim();S.a.coachEmail=hce.value.trim();return S.a.plays||'';};
+      } else if(q[2]==='classes'){
+        lab.removeAttribute('for');c.appendChild(h('p','af-muted','Tap the subjects, then add up to three classes and your current grade. Or skip this one.'));
+        S.a.subjects=S.a.subjects||[];var sc=h('div','af-chips');['English','Math','Science','History/Social studies','Foreign language','Art/Music','Other'].forEach(function(t){var ch=h('button','af-chip',esc(t));ch.type='button';ch.setAttribute('aria-pressed',S.a.subjects.indexOf(t)>-1?'true':'false');ch.addEventListener('click',function(){var k=S.a.subjects.indexOf(t);if(k>-1)S.a.subjects.splice(k,1);else S.a.subjects.push(t);ch.setAttribute('aria-pressed',k>-1?'false':'true');});sc.appendChild(ch);});c.appendChild(sc);
+        S.a.classRows=S.a.classRows||[{n:'',g:''},{n:'',g:''},{n:'',g:''}];var cins=[],cph=['e.g. Chemistry','e.g. Pre-calc','e.g. English 12'];
+        S.a.classRows.forEach(function(rw,r){var row=h('div');row.style.marginTop='12px';var ci=h('input','af-input');ci.type='text';ci.placeholder=cph[r];ci.value=rw.n;ci.setAttribute('aria-label','Class '+(r+1));row.appendChild(ci);
+          var gc=h('div','af-chips');gc.style.marginTop='6px';['B','C','D','F'].forEach(function(gr){var ch=h('button','af-chip','Current grade: '+gr);ch.type='button';ch.setAttribute('aria-pressed',rw.g===gr?'true':'false');ch.addEventListener('click',function(){rw.g=(rw.g===gr?'':gr);[].forEach.call(gc.children,function(x){x.setAttribute('aria-pressed','false');});if(rw.g)ch.setAttribute('aria-pressed','true');});gc.appendChild(ch);});row.appendChild(gc);c.appendChild(row);cins.push(ci);});
+        inp={value:''};inp.getVal=function(){S.a.classRows.forEach(function(rw,r){rw.n=cins[r].value.trim();});var cl=S.a.classRows.filter(function(rw){return rw.n;}).map(function(rw){return rw.n+(rw.g?' (currently a '+rw.g+')':'');});S.a.classes=cl.join(', ');return true;};
+      } else if(q[2]==='social'){
+        lab.removeAttribute('for');var soy=h('div','af-chips'),sobox=h('div',S.a.hasSocial==='Yes'?'':'af-hidden'),sono=h('p','af-p af-muted '+(S.a.hasSocial==='No'?'':'af-hidden'),(p.id==='college'?'No problem. Your agent can help you create a LinkedIn and other profiles for networking, internships and jobs.':'No problem. Your agent can help you create accounts to promote yourself to colleges and coaches.'));
+        ['Yes','No'].forEach(function(t){var ch=h('button','af-chip',t);ch.type='button';ch.setAttribute('aria-pressed',S.a.hasSocial===t?'true':'false');ch.addEventListener('click',function(){S.a.hasSocial=t;[].forEach.call(soy.children,function(x){x.setAttribute('aria-pressed','false');});ch.setAttribute('aria-pressed','true');msg.classList.add('af-hidden');sobox.classList.toggle('af-hidden',t!=='Yes');sono.classList.toggle('af-hidden',t!=='No');});soy.appendChild(ch);});c.appendChild(soy);
+        sobox.appendChild(h('p','af-muted','Add your handles. Leave any blank you don’t use.'));S.a.handles=S.a.handles||{};var hin={};
+        (p.id==='college'?['LinkedIn','Instagram','TikTok','X (Twitter)','YouTube']:['Instagram','TikTok','X (Twitter)','YouTube','Facebook']).forEach(function(n){var x=h('input','af-input');x.type='text';x.placeholder=n+' handle (e.g. @yourname)';x.setAttribute('aria-label',n+' handle');x.value=S.a.handles[n]||'';x.style.marginTop='10px';sobox.appendChild(x);hin[n]=x;});
+        c.appendChild(sobox);c.appendChild(sono);
+        inp={value:''};inp.getVal=function(){Object.keys(hin).forEach(function(n){S.a.handles[n]=hin[n].value.trim();});return S.a.hasSocial||'';};
+      } else if(q[2]==='cschool'){
+        lab.removeAttribute('for');var cg=h('div','af-chips');p.cgrades.forEach(function(t){var ch=h('button','af-chip',esc(t));ch.type='button';ch.setAttribute('aria-pressed',S.a.grade===t?'true':'false');ch.addEventListener('click',function(){S.a.grade=t;[].forEach.call(cg.children,function(x){x.setAttribute('aria-pressed','false');});ch.setAttribute('aria-pressed','true');msg.classList.add('af-hidden');});cg.appendChild(ch);});c.appendChild(cg);
+        function cin(ph,lab,val){var x=h('input','af-input');x.type='text';x.placeholder=ph;x.setAttribute('aria-label',lab);x.value=val||'';x.style.marginTop='10px';c.appendChild(x);return x;}
+        var csn=cin('College or university (optional)','College name',S.a.biz),cmj=cin('Major or intended major (optional, e.g. Nursing, undecided)','Major',S.a.study),cgy=cin('Expected graduation year (optional)','Graduation year',S.a.gradYear),cgp=cin('Current GPA (optional)','Current GPA',S.a.gpa);
+        inp={value:''};inp.getVal=function(){S.a.biz=csn.value.trim();S.a.study=cmj.value.trim();S.a.gradYear=cgy.value.trim();S.a.gpa=cgp.value.trim();return S.a.grade||'';};
+      } else if(q[2]==='athlete'){
+        lab.removeAttribute('for');var ast=h('div','af-chips'),abox=h('div',S.a.athlete&&S.a.athlete!=='No'?'':'af-hidden'),apro=h('div');
+        var SP2=['Basketball','Football','Baseball','Softball','Soccer','Volleyball','Track & field','Cross country','Wrestling','Swimming','Tennis','Golf','Lacrosse','Hockey','Cheer','Other'];S.a.acts=S.a.acts||[];
+        function pro(){apro.classList.toggle('af-hidden',!(S.a.athlete==='Walk-on prospect'||S.a.athlete==='In the transfer portal'));}
+        ['No','On a team','Walk-on prospect','In the transfer portal'].forEach(function(t){var ch=h('button','af-chip',esc(t));ch.type='button';ch.setAttribute('aria-pressed',S.a.athlete===t?'true':'false');ch.addEventListener('click',function(){S.a.athlete=t;[].forEach.call(ast.children,function(x){x.setAttribute('aria-pressed','false');});ch.setAttribute('aria-pressed','true');msg.classList.add('af-hidden');abox.classList.toggle('af-hidden',t==='No');pro();});ast.appendChild(ch);});c.appendChild(ast);
+        var asl=h('p','af-label','Your sport');asl.style.fontSize='16px';asl.style.marginTop='14px';abox.appendChild(asl);
+        var asg=h('div','af-chips');SP2.forEach(function(t){var ch=h('button','af-chip',esc(t));ch.type='button';ch.setAttribute('aria-pressed',S.a.acts.indexOf(t)>-1?'true':'false');ch.addEventListener('click',function(){var k=S.a.acts.indexOf(t);if(k>-1)S.a.acts.splice(k,1);else S.a.acts.push(t);ch.setAttribute('aria-pressed',k>-1?'false':'true');msg.classList.add('af-hidden');});asg.appendChild(ch);});abox.appendChild(asg);
+        function ain(par,ph,lab,val){var x=h('input','af-input');x.type='text';x.placeholder=ph;x.setAttribute('aria-label',lab);x.value=val||'';x.style.marginTop='10px';par.appendChild(x);return x;}
+        var aoth=ain(abox,'Other sport (if not listed)','Other sport',S.a.actOther),apos=ain(abox,'Position or event (optional)','Position',S.a.position);
+        var ahl=ain(apro,'Link to highlights or stats, like Hudl (optional)','Highlights link',S.a.highlights),ast2=ain(apro,'Key stats or achievements (optional)','Key stats',S.a.stats);
+        var apl=h('p','af-label','Do you need help promoting yourself to coaches?');apl.style.fontSize='16px';apl.style.marginTop='14px';apro.appendChild(apl);
+        var apc=h('div','af-chips');['I have highlight videos. Help me share them','I need help creating highlight videos','Help me with both','No thanks'].forEach(function(t){var ch=h('button','af-chip',esc(t));ch.type='button';ch.setAttribute('aria-pressed',S.a.promo===t?'true':'false');ch.addEventListener('click',function(){S.a.promo=t;[].forEach.call(apc.children,function(x){x.setAttribute('aria-pressed','false');});ch.setAttribute('aria-pressed','true');});apc.appendChild(ch);});apro.appendChild(apc);
+        abox.appendChild(apro);c.appendChild(abox);pro();
+        inp={value:''};inp.getVal=function(){S.a.actOther=aoth.value.trim();var l=S.a.acts.filter(function(x){return x!=='Other';});if(S.a.actOther)l.push(S.a.actOther);S.a.sport=l.join(', ');S.a.position=apos.value.trim();S.a.highlights=ahl.value.trim();S.a.stats=ast2.value.trim();if(S.a.athlete==='No'||S.a.athlete==='On a team'){S.a.highlights='';S.a.stats='';S.a.promo='';}return S.a.athlete||'';};
+      } else if(q[2]==='ptools'){
+        lab.removeAttribute('for');c.appendChild(h('p','af-muted','Your agent will learn to work with these.'));
+        function one(title,key,opts){var l=h('p','af-label',title);l.style.fontSize='16px';l.style.marginTop='10px';c.appendChild(l);var g=h('div','af-chips');opts.forEach(function(t){var ch=h('button','af-chip',esc(t));ch.type='button';ch.setAttribute('aria-pressed',S.a[key]===t?'true':'false');ch.addEventListener('click',function(){S.a[key]=t;[].forEach.call(g.children,function(x){x.setAttribute('aria-pressed','false');});ch.setAttribute('aria-pressed','true');msg.classList.add('af-hidden');ox[key].classList.toggle('af-hidden',t!=='Other');if(t==='Other')ox[key].firstChild.focus();});g.appendChild(ch);});c.appendChild(g);var od=h('div',S.a[key]==='Other'?'':'af-hidden'),oi=h('input','af-input');oi.type='text';oi.placeholder='Which one?';oi.value=S.a[key+'Other']||'';od.appendChild(oi);c.appendChild(od);ox[key]=od;}
+        var ox={};
+        one('Email','pEmail',['Gmail','Outlook or Hotmail','Yahoo','iCloud','Other']);
+        one('Calendar','pCal',['Google Calendar','Outlook Calendar','Apple Calendar','Cozi','Paper calendar or planner','None yet','Other']);
+        inp={value:''};inp.getVal=function(){S.a.pEmailOther=ox.pEmail.firstChild.value.trim();S.a.pCalOther=ox.pCal.firstChild.value.trim();var e=S.a.pEmail==='Other'?S.a.pEmailOther:S.a.pEmail,k=S.a.pCal==='Other'?S.a.pCalOther:S.a.pCal;if(!e||!k)return '';S.a.tools='Email: '+e+'; Calendar: '+k;return 'ok';};
+      } else if(q[2]==='track'){
+        lab.removeAttribute('for');var tl2=h('div','af-grid');var topts=[];
+        (S.a.taskPicks||[]).forEach(function(k){if(k<p.tasks.length)topts.push(p.tasks[k]);else if(S.a.taskOther)topts.push([S.a.taskOther,'']);});
+        p.tasks.forEach(function(t){if(topts.indexOf(t)<0)topts.push(t);});
+        topts.push(['Something else','Type it in a few words']);var tlast=topts.length-1;
+        var toth=h('div','af-hidden'),tot2=h('input','af-input');tot2.type='text';tot2.placeholder='What do you need to keep track of?';tot2.value=S.a.trackOther||'';toth.appendChild(tot2);
+        function tmark(){[].forEach.call(tl2.children,function(x,k){x.setAttribute('aria-pressed',S.a.trackPick===k?'true':'false');});toth.classList.toggle('af-hidden',S.a.trackPick!==tlast);}
+        topts.forEach(function(t,k){var b=h('button','af-pick');b.type='button';b.innerHTML='<span class="af-badge" aria-hidden="true">'+(k+1)+'</span><span><strong>'+esc(t[0])+'</strong>'+(t[1]?'<span class="af-muted"> · '+esc(t[1])+'</span>':'')+'</span>';b.addEventListener('click',function(){S.a.trackPick=k;msg.classList.add('af-hidden');tmark();if(k===tlast)tot2.focus();});tl2.appendChild(b);});
+        c.appendChild(h('p','af-muted','Your picks from the last question are at the top.'));c.appendChild(tl2);c.appendChild(toth);
+        var tdl=h('label','af-label','Tell us more <span class="af-muted">(optional)</span>');tdl.style.fontSize='16px';tdl.style.marginTop='14px';var tdid='aftd'+Math.random().toString(36).slice(2,8);tdl.setAttribute('for',tdid);c.appendChild(tdl);
+        var td=h('input','af-input');td.id=tdid;td.type='text';td.placeholder='e.g. Three kids, three teams';td.value=S.a.trackMore||'';c.appendChild(td);
+        S.a.trackPick=null;if(S.a.trackKey){for(var ti=0;ti<topts.length;ti++)if(topts[ti][0]===S.a.trackKey)S.a.trackPick=ti;}tmark();
+        inp={value:''};inp.getVal=function(){S.a.trackOther=tot2.value.trim();S.a.trackMore=td.value.trim();if(S.a.trackPick==null)return '';S.a.trackKey=topts[S.a.trackPick][0];var t=S.a.trackPick===tlast?S.a.trackOther:topts[S.a.trackPick][0];if(!t)return null;S.a.track=t;return t;};
+      } else if(q[2]==='household'){
+        lab.removeAttribute('for');S.a.hh=S.a.hh||[];var hg=h('div','af-chips');
+        var SP='Partner or spouse';
+        ['Partner or spouse','Little kids','School-age kids','High schoolers','College students','Aging parents I help care for','Pets'].forEach(function(t){var ch=h('button','af-chip',esc(t));ch.type='button';ch.setAttribute('aria-pressed',S.a.hh.indexOf(t)>-1?'true':'false');ch.addEventListener('click',function(){var k=S.a.hh.indexOf(t);if(k>-1)S.a.hh.splice(k,1);else S.a.hh.push(t);ch.setAttribute('aria-pressed',k>-1?'false':'true');msg.classList.add('af-hidden');spShow();});hg.appendChild(ch);});c.appendChild(hg);
+        c.appendChild(h('p','af-muted','No names or ages needed.'));
+        var spb=h('div','af-device af-hidden');spb.style.marginTop='14px';
+        spb.appendChild(h('p','af-h3','Would you like our agent to work with your spouse or partner as well, so we can communicate with them too?'));
+        spb.appendChild(h('p','af-muted',SOFT()?'We’ll reach out to them with the same setup steps so you can run the household together.':'We’ll email them the same setup steps so you can run the household together.'));
+        var spc=h('div','af-chips');['Yes, add them','Not now'].forEach(function(t){var ch=h('button','af-chip',t);ch.type='button';ch.setAttribute('aria-pressed',S.a.spouseYes===t?'true':'false');ch.addEventListener('click',function(){S.a.spouseYes=t;[].forEach.call(spc.children,function(x){x.setAttribute('aria-pressed','false');});ch.setAttribute('aria-pressed','true');msg.classList.add('af-hidden');spf.classList.toggle('af-hidden',t!=='Yes, add them');if(t==='Yes, add them')spn.focus();});spc.appendChild(ch);});spb.appendChild(spc);
+        var spf=h('div',S.a.spouseYes==='Yes, add them'?'':'af-hidden');
+        var spn=h('input','af-input');spn.type='text';spn.placeholder='Their first name';spn.value=S.a.spouseName||'';spn.setAttribute('aria-label','Spouse or partner first name');spn.style.marginTop='10px';spf.appendChild(spn);
+        var spe=h('input','af-input');spe.type='email';spe.setAttribute('inputmode','email');spe.placeholder='Their email';spe.value=S.a.spouseEmail||'';spe.setAttribute('aria-label','Spouse or partner email');spe.style.marginTop='10px';spf.appendChild(spe);
+        spb.appendChild(spf);c.appendChild(spb);
+        function spShow(){spb.classList.toggle('af-hidden',S.a.hh.indexOf(SP)<0);}spShow();
+        var ksl=h('p','af-label','Do any of your kids play sports or do activities?');ksl.style.fontSize='16px';ksl.style.marginTop='14px';c.appendChild(ksl);
+        var ksy=h('div','af-chips');['Yes','No'].forEach(function(t){var ch=h('button','af-chip',t);ch.type='button';ch.setAttribute('aria-pressed',S.a.kidsActs===t?'true':'false');ch.addEventListener('click',function(){S.a.kidsActs=t;[].forEach.call(ksy.children,function(x){x.setAttribute('aria-pressed','false');});ch.setAttribute('aria-pressed','true');});ksy.appendChild(ch);});c.appendChild(ksy);
+        var wkl=h('label','af-label','Anything we should know about your family’s week? <span class="af-muted">(optional)</span>');wkl.style.fontSize='16px';wkl.style.marginTop='14px';var wkid='afwk'+Math.random().toString(36).slice(2,8);wkl.setAttribute('for',wkid);c.appendChild(wkl);
+        var wk=h('input','af-input');wk.id=wkid;wk.type='text';wk.placeholder='e.g. Two kids in travel soccer, I work nights';wk.value=S.a.week||'';c.appendChild(wk);
+        inp={value:''};inp.getVal=function(){S.a.week=wk.value.trim();S.a.spouseName=spn.value.trim();S.a.spouseEmail=spe.value.trim();if(S.a.hh.indexOf(SP)<0||S.a.spouseYes!=='Yes, add them'){S.a.spouseName='';S.a.spouseEmail='';}return S.a.hh.length?'ok':'';};
+      } else if(q[2]==='company'){
+        lab.removeAttribute('for');
+        var CQ=q[3]||{};var cn=h('input','af-input');cn.type='text';cn.placeholder=CQ.namePh||'Company name';cn.value=S.a.biz||'';cn.setAttribute('aria-label','Company name');c.appendChild(cn);
+        var cw=h('input','af-input');cw.type='text';cw.setAttribute('inputmode','url');cw.placeholder=CQ.webPh||'Company website (e.g. yourcompany.com)';cw.value=S.a.web||'';cw.setAttribute('aria-label','Company website');cw.style.marginTop='10px';c.appendChild(cw);
+        inp={value:''};inp.getVal=function(){S.a.biz=cn.value.trim();S.a.web=cw.value.trim();S.a.whatPrefix='';return true;};
+      } else if(q[2]==='goals'){
+        var GK=q[0],GL=p[q[3]||'goals'];if(GK==='goal'&&p.athleteGoals&&(S.a.athlete==='Walk-on prospect'||S.a.athlete==='In the transfer portal'))GL=GL.concat(p.athleteGoals);lab.removeAttribute('for');c.appendChild(h('p','af-muted','Tap as many as you like, or skip this one.'));
+        var gl=h('div','af-grid');S.a[GK+'Picks']=S.a[GK+'Picks']||[];var gp=S.a[GK+'Picks'],gopts=GL.concat(['Something else']),glast=gopts.length-1;
+        var goth=h('div','af-hidden'),got=h('input','af-input');got.type='text';got.placeholder=GK==='goal'?'What would make this month a win?':'Tell us in a few words';got.value=S.a[GK+'Other']||'';goth.appendChild(got);
+        function gmark(){[].forEach.call(gl.children,function(x,k){x.setAttribute('aria-pressed',gp.indexOf(k)>-1?'true':'false');});goth.classList.toggle('af-hidden',gp.indexOf(glast)<0);}
+        gopts.forEach(function(t,k){var b=h('button','af-pick');b.type='button';b.innerHTML='<span class="af-badge" aria-hidden="true">'+(k+1)+'</span><span><strong>'+esc(t)+'</strong></span>';
+          b.addEventListener('click',function(){var at=gp.indexOf(k);if(at>-1)gp.splice(at,1);else gp.push(k);msg.classList.add('af-hidden');gmark();if(k===glast&&at<0)got.focus();});gl.appendChild(b);});
+        c.appendChild(gl);c.appendChild(goth);gmark();
+        inp={value:''};inp.getVal=function(){S.a[GK+'Other']=got.value.trim();var out=[];for(var x=0;x<gp.length;x++){var g=gp[x];if(g===glast){if(!S.a[GK+'Other'])return null;out.push(S.a[GK+'Other']);}else out.push(gopts[g]);}return out;};
+      } else if(q[2]==='tools'){
+        var tl=p.tools||CONFIG.toolOptions;c.appendChild(h('p','af-muted','Tap every app you use. This tells us what skills your agent may need to learn to help you.'));
+        inp=h('div','af-chips');var toth=h('div',S.tools.indexOf('Other')>-1?'':'af-hidden'),tot=h('input','af-input');
+        tl.forEach(function(t){var ch=h('button','af-chip',esc(t));ch.type='button';ch.setAttribute('aria-pressed',S.tools.indexOf(t)>-1?'true':'false');ch.addEventListener('click',function(){var k=S.tools.indexOf(t);if(k>-1)S.tools.splice(k,1);else{S.tools.push(t);if(t==='None yet')S.tools=['None yet'];else{var nk=S.tools.indexOf('None yet');if(nk>-1)S.tools.splice(nk,1);}}[].forEach.call(inp.children,function(x){x.setAttribute('aria-pressed',S.tools.indexOf(x.textContent)>-1?'true':'false');});toth.classList.toggle('af-hidden',S.tools.indexOf('Other')<0);if(t==='Other'&&S.tools.indexOf('Other')>-1)tot.focus();});inp.appendChild(ch);});
+        lab.removeAttribute('for');c.appendChild(inp);
+        var tid='aft'+Math.random().toString(36).slice(2,8),tlab=h('label','af-label','What other apps do you work in every day that you want to be more productive with?');tlab.setAttribute('for',tid);tlab.style.fontSize='16px';tlab.style.marginTop='14px';
+        tot.id=tid;tot.type='text';tot.placeholder='e.g. Mailchimp, Wix, Toast, a booking system';tot.value=S.a.toolsOther||'';toth.appendChild(tlab);toth.appendChild(tot);c.appendChild(toth);
+      } else {
+        inp=h(q[2]==='long'||q[2]==='task'?'textarea':'input','af-input');inp.id=id;inp.value=S.a[q[0]]||'';if(q[2]==='text')inp.type='text';if(q[3]&&q[3].ph)inp.placeholder=q[3].ph;if(q[3]&&q[3].optional)lab.innerHTML+=' <span class="af-muted">(optional)</span>';c.appendChild(inp);
+        if(q[2]==='task'){c.appendChild(h('p','af-muted','Or pick one:'));var chips=h('div','af-chips');p.tasks.forEach(function(t){var ch=h('button','af-chip',esc(t));ch.type='button';ch.addEventListener('click',function(){inp.value=t;inp.focus();});chips.appendChild(ch);});c.appendChild(chips);}
+      }
+      var msg=h('p','af-err af-hidden','Please add an answer to keep going.');msg.setAttribute('role','alert');c.appendChild(msg);
+      var n=h('div','af-nav');
+      n.appendChild(btn('Back','af-btn-ghost',function(){if(q[2]==='web'){S.a.web=inp.value;S.a.what=wt.value;}else if(['pick','goals','area','company','resp','erole','school','sport','classes','social','cschool','athlete','household','ptools','track'].indexOf(q[2])>-1){inp.getVal();}else if(q[2]==='tools'){S.a.toolsOther=tot.value.trim();}else S.a[q[0]]=inp.value;if(S.i===0){p.minorCheck?ageCheck():home();}else{S.i--;question();}}));
+      n.appendChild(btn(S.i===qs.length-1?'Build my agent':'Next','af-btn-primary',function(){
+        if(q[2]==='tools'){S.a.toolsOther=tot.value.trim();var tt=S.tools.filter(function(x){return x!=='Other';});if(S.a.toolsOther)tt.push(S.a.toolsOther);S.a.tools=tt.join(', ')||'None yet';}
+        else if(q[2]==='area'){var av=inp.getVal();if(!av){msg.textContent=S.a.areaPick!=null?'Please type the area you work in.':'Please pick a number.';msg.classList.remove('af-hidden');return;}if(!S.a.manages){msg.textContent='Please tell us if you manage people.';msg.classList.remove('af-hidden');return;}S.a.area=av;}
+        else if(q[2]==='erole'){var ev=inp.getVal();if(!ev){msg.textContent=S.a.rolePick!=null?'Please type your role.':'Please pick a number.';msg.classList.remove('af-hidden');return;}if(!S.a.levelPicks.length){msg.textContent='Please tap who you work with.';msg.classList.remove('af-hidden');return;}S.a.role=ev;}
+        else if(q[2]==='athlete'){var atv=inp.getVal();if(!atv){msg.textContent='Please tap one.';msg.classList.remove('af-hidden');return;}if(atv!=='No'&&!S.a.sport){msg.textContent='Please tap your sport.';msg.classList.remove('af-hidden');return;}}
+        else if(q[2]==='ptools'){if(!inp.getVal()){msg.textContent='Please tap your email and your calendar.';msg.classList.remove('af-hidden');return;}}
+        else if(q[2]==='track'){var tv=inp.getVal();if(!tv){msg.textContent=tv===null?'Please type it in a few words.':'Please pick one number.';msg.classList.remove('af-hidden');return;}}
+        else if(q[2]==='household'){if(!inp.getVal()){msg.textContent='Please tap who’s in your household.';msg.classList.remove('af-hidden');return;}if(S.a.spouseYes==='Yes, add them'&&S.a.hh.indexOf('Partner or spouse')>-1&&!okEmail(S.a.spouseEmail)){msg.textContent='Please add your spouse or partner’s email, or tap “Not now.”';msg.classList.remove('af-hidden');return;}}
+        else if(q[2]==='cschool'){if(!inp.getVal()){msg.textContent='Please tap your year.';msg.classList.remove('af-hidden');return;}}
+        else if(q[2]==='school'){if(!inp.getVal()){msg.textContent='Please tap where you are in school.';msg.classList.remove('af-hidden');return;}}
+        else if(q[2]==='sport'){var spv=inp.getVal();if(!spv){msg.textContent='Please tap Yes or No.';msg.classList.remove('af-hidden');return;}if(spv==='Yes'&&!S.a.sport){msg.textContent='Please tap your sport or activity.';msg.classList.remove('af-hidden');return;}}
+        else if(q[2]==='company'||q[2]==='classes'){inp.getVal();}
+        else if(q[2]==='social'){if(!inp.getVal()){msg.textContent='Please tap Yes or No.';msg.classList.remove('af-hidden');return;}}
+        else if(q[2]==='resp'){var rv=inp.getVal();if(!rv.length){msg.textContent='Please add at least one responsibility.';msg.classList.remove('af-hidden');return;}S.a.resp=rv;}
+        else if(q[2]==='goals'){var gv=inp.getVal();if(gv===null){msg.textContent='Please type a few words for “Something else,” or untick it.';msg.classList.remove('af-hidden');return;}S.a[q[0]]=gv.join('; ');}
+        else if(q[2]==='pick'){var pv=inp.getVal();if(!pv||!pv.length){msg.textContent=pv===null?'Please type the job in a few words.':'Please pick at least one number.';msg.classList.remove('af-hidden');return;}S.a.task=pv[0];S.a.moreTasks=pv.slice(1);var fk=S.a.taskPicks[0];S.a.taskCat=(fk===p.tasks.length)?'Something else':p.tasks[fk][0];}
+        else if(q[2]==='web'){var wv=inp.value.trim(),dv=wt.value.trim();
+          S.a.whatPrefix=(q[3]&&q[3].whatPrefix)||'What we do: ';if(wv){S.a.web=wv;S.a.what='';}else if(S.noweb&&dv){S.a.web='';S.a.what=dv;}
+          else{var W2=q[3]||{};msg.textContent=S.noweb?'Please add a short description.':'Please add a link, or tap “'+(W2.noLabel||'I don’t have a website or Facebook page')+'.”';msg.classList.remove('af-hidden');return;}}
+        else{var v=inp.value.trim();if(!v&&q[0]!=='goal'&&!(q[3]&&q[3].optional)){msg.classList.remove('af-hidden');return;}S.a[q[0]]=v;}
+        if(S.i<qs.length-1){S.i++;question();}else{S.step=0;S.minor?packet():platform();}
+      }));
+      c.appendChild(n);render([c]);
+    }
+
+    function message(){
+      var a=S.a,p=S.path,lines=[];
+      lines.push('Please set up my personal agent.','',
+        'About me: '+(a.name||'')+', '+p.label.toLowerCase()+'.',
+        (a.area?'I work in: '+a.area+(a.manages==='Yes'?', and I manage a team':', as an individual contributor'):null),
+        (a.grade?(S.path&&S.path.id==='college'?'Year in college: ':'School: ')+a.grade+(a.biz?' at '+a.biz:'')+(a.gradYear?', graduating '+a.gradYear:'')+(a.gpa?', current GPA '+a.gpa:''):null),
+        (a.study?'What I want to study: '+a.study:null),
+        (a.where?'Where I want to go to school: '+a.where:null),
+        (a.athlete&&a.athlete!=='No'?'College athlete: '+a.athlete+' ('+a.sport+(a.position?', '+a.position:'')+')'+(a.stats?'. Key stats: '+a.stats:'')+(a.highlights?'. Highlights: '+a.highlights:'')+(a.promo&&a.promo!=='No thanks'?'. Help promoting myself: '+a.promo:''):null),
+        (a.plays==='Yes'?'Sport or activity I want to continue in college: '+a.sport+(a.position?' ('+a.position+')':'')+(a.level&&a.isSport?', aiming for '+a.level:'')+(a.club?'. Club team: '+a.club:'')+(a.stats?'. Key stats/achievements: '+a.stats:'')+(a.highlights?'. Highlights/stats link: '+a.highlights:''):null),
+        (a.plays==='Yes'&&a.promo&&a.promo!=='No thanks'?'Help promoting myself: '+a.promo:null),
+        (a.plays==='Yes'&&(a.coachName||a.coachEmail)?'My high school coach or director: '+[a.coachName,a.coachEmail].filter(function(x){return x;}).join(', '):null),
+        (a.subjects&&a.subjects.length?'Subjects I want to improve in: '+a.subjects.join(', '):null),
+        (a.classes?'Classes I want to raise my grade in: '+a.classes:null),
+        (a.role?'My role: '+a.role+(a.levelPicks&&a.levelPicks.length?', working with '+a.levelPicks.join(', '):'')+(a.subject?'. Subject or program: '+a.subject:''):null),
+        (a.resp&&a.resp.length?'My most important responsibilities (weekly/monthly): '+a.resp.map(function(x,k){return (k+1)+') '+x;}).join('; '):null),
+        (a.biz&&!(S.path&&(S.path.id==='student'||S.path.id==='college'))?(S.path&&S.path.id==='leader'?'My company: ':(S.path&&S.path.id==='educator'?'My school or organization: ':'My business: '))+a.biz:(a.org?'Context: '+a.org:null)),
+        (a.web?(S.path&&S.path.id==='leader'?'Company website: '+a.web+' (read it first to learn what my company does)':S.path&&S.path.id==='educator'?'School or organization website: '+a.web+' (read it first to learn about where I work)':'Website or Facebook page: '+a.web+' (read it first to learn what we do and who we serve)'):(a.what?(a.whatPrefix||'What we do: ')+a.what:null)),
+        'First job: '+(a.task||''),
+        (a.moreTasks&&a.moreTasks.length?'Next jobs, after the first one is running well: '+a.moreTasks.join('; '):null),
+        (a.hh&&a.hh.length?'My household: '+a.hh.join(', ')+(a.kidsActs==='Yes'?'. My kids play sports or do activities':''):null),
+        (a.week?'About our week: '+a.week:null),
+        (a.track?'The most important thing I need to keep track of: '+a.track+(a.trackMore?' ('+a.trackMore+')':''):null),
+        (a.spouseEmail?'My spouse or partner'+(a.spouseName?', '+a.spouseName+',':'')+' runs the household with me and is setting up their own agent. Help us coordinate: shared calendar, shared lists, and keep us both in the loop.':null),
+        (a.why?'Why I’m starting this: '+a.why:null),
+        (a.hasSocial==='Yes'?(function(){var l=Object.keys(a.handles||{}).filter(function(n){return a.handles[n];}).map(function(n){return n+' '+a.handles[n];});return l.length?'My social media: '+l.join(', '):'I have social media accounts (handles not shared yet).';})():(a.hasSocial==='No'?(S.path&&S.path.id==='college'?'I don’t have social media accounts yet. Help me create a LinkedIn and other profiles for networking, internships and jobs.':'I don’t have social media accounts yet. Help me create them so I can promote myself to colleges and coaches.'):null)),
+        (a.tools?'Tools I use (learn the skills you need to work with these): '+a.tools:(S.path&&S.path.id==='starting'?null:'Tools I use: None yet')),
+        'A great first month: '+(a.goal||'Steady progress on the first job, with a short summary each evening.'),'',
+        'How to work with me:',
+        '- Start your first reply with: "I\'m set up. Here\'s what I\'ll do first:" and then your plan.',
+        '- Ask me 2-3 questions before you start, then begin the first job.',
+        '- Check with me before sending, posting, spending money or making a promise.',
+        (S.path&&(S.path.id==='student'||S.path.id==='college')?'- Always show me messages to teachers, professors, coaches, employers and colleges before they go out. Never submit an application without my OK.':null),
+        (S.path&&S.path.id==='college'&&a.athlete&&a.athlete!=='No'?(a.athlete==='On a team'?'- Athletics: I am on a team and NOT in the transfer portal. Do not contact coaches at other schools. Help me with training, recovery and my schedule, and follow NCAA/NAIA rules.':'- Athletics: follow NCAA/NAIA contact rules. I am '+(a.athlete==='Walk-on prospect'?'a walk-on prospect':'in the transfer portal')+', so you may help me contact coaches. Check with my compliance office if unsure.'):null),
+        '- Give me a 10-minute summary each evening: what you did, what you need from me, what is next.',
+        '- Keep a memory of what you learn about me and my work so you get better each week.');
+      return lines.filter(function(x){return x!==null;}).join('\n');
+    }
+
+    function copy(text,status){
+      function ok(){status.textContent='Copied. Now open '+(isMuse()?CONFIG.appName:platName())+' and paste it.';status.className='af-ok';}
+      function fail(){status.textContent='Copy didn’t work here. Tap “Show message” and copy it by hand.';status.className='af-err';}
+      try{if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(ok,fail);return;}}catch(e){}
+      try{var t=document.createElement('textarea');t.value=text;t.setAttribute('readonly','');t.style.position='absolute';t.style.left='-9999px';root.appendChild(t);t.select();var r=document.execCommand('copy');root.removeChild(t);r?ok():fail();}catch(e){fail();}
+    }
+
+    function field(c,lbl,type,val,opt){var id='aff'+Math.random().toString(36).slice(2,8);var l=h('label','af-label',esc(lbl)+(opt?' <span class="af-muted">(optional)</span>':''));l.setAttribute('for',id);l.style.fontSize='16px';l.style.marginTop='14px';var i=h('input','af-input');i.type=type;i.id=id;if(val)i.value=val;c.appendChild(l);c.appendChild(i);return i;}
+    function okEmail(e){return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e);}
+    // Coach names and emails stay out of Salesforce (Dorian, 11/23); the visitor still copies the full message on the page.
+    function sfMsg(m){return m.split('\n').filter(function(l){return l.indexOf('My high school coach or director:')!==0;}).join('\n');}
+    // Sign-up 'company' box: only for paths with a business, employer or school to name. Students and parents skip it.
+    function coLabel(){var id=S.path.id;return id==='owner'||id==='starting'?'Business name':id==='leader'?'Company':id==='educator'?'School or organization':'';}
+    function reasons(){var hide={student:['Get more customers or sales','Run my team better','Help with teaching or training','Get my household organized'],college:['Get more customers or sales','Run my team better','Help with teaching or training','Get my household organized'],parent:['Get more customers or sales','Run my team better','Help with teaching or training','Do better in school and plan what’s next'],owner:['Do better in school and plan what’s next','Get my household organized','Help with teaching or training'],starting:['Do better in school and plan what’s next','Get my household organized','Help with teaching or training','Run my team better'],leader:['Do better in school and plan what’s next','Get my household organized','Help with teaching or training'],educator:['Get more customers or sales','Get my household organized','Do better in school and plan what’s next']}[S.path.id]||[];return CONFIG.signupReasons.filter(function(r){return hide.indexOf(r)<0;});}
+    function details(){var a=S.a;return 'Path: '+S.path.label+(a.biz&&S.path.id!=='student'&&S.path.id!=='college'?'\nBusiness: '+a.biz:'')+(a.web?'\nWebsite/Facebook: '+a.web:'')+(a.what?'\nWhat they do: '+a.what:'')+(a.area?'\nArea: '+a.area+' | Manages people: '+(a.manages||''):'')+(a.grade?'\nSchool: '+a.grade+(a.biz?' at '+a.biz:'')+(a.gradYear?' | Grad year: '+a.gradYear:'')+(a.gpa?' | GPA: '+a.gpa:''):'')+(a.study?'\nWants to study: '+a.study:'')+(a.where?'\nWhere: '+a.where:'')+(a.plays==='Yes'?'\nSport/activity: '+a.sport+(a.position?' / '+a.position:'')+(a.level&&a.isSport?' | Level: '+a.level:'')+(a.club?' | Club: '+a.club:'')+(a.stats?' | Stats: '+a.stats:'')+(a.highlights?' | Highlights: '+a.highlights:'')+(a.promo?' | Promotion help: '+a.promo:''):'')+(a.subjects&&a.subjects.length?'\nSubjects: '+a.subjects.join(', '):'')+(a.classes?'\nClasses to raise: '+a.classes:'')+(a.athlete?'\nCollege athlete: '+a.athlete+(a.sport?' | Sport: '+a.sport:''):'')+(a.hasSocial?'\nSocial media: '+(a.hasSocial==='Yes'?Object.keys(a.handles||{}).filter(function(n){return a.handles[n];}).map(function(n){return n+' '+a.handles[n];}).join(', ')||'yes':'none yet, wants help creating accounts'):'')+(a.role?'\nEducator role: '+a.role+' | Works with: '+((a.levelPicks||[]).join(', '))+(a.subject?' | Subject: '+a.subject:''):'')+(a.resp&&a.resp.length?'\nTop responsibilities: '+a.resp.join('; '):'')+(a.hh&&a.hh.length?'\nHousehold: '+a.hh.join(', ')+(a.kidsActs?' | Kids in sports/activities: '+a.kidsActs:''):'')+(a.week?'\nTheir week: '+a.week:'')+(a.track?'\nMost important to track: '+a.track+(a.trackMore?' ('+a.trackMore+')':''):'')+(a.spouseEmail?'\nSPOUSE/PARTNER INVITE: '+(a.spouseName||'(no name)')+' <'+a.spouseEmail+'> | Send them the setup email and create their Lead':'')+(a.why?'\nWhy this space: '+a.why:'')+(a.taskCat?'\nFirst job category: '+a.taskCat:'')+'\nFirst job: '+(a.task||'')+(a.moreTasks&&a.moreTasks.length?'\nNext jobs: '+a.moreTasks.join('; '):'')+(a.org?'\nContext: '+a.org:'')+(a.tools?'\nTools: '+a.tools:'')+'\nGoal: '+(a.goal||'');}
+
+    function isMuse(){return !S.plat||S.plat==='Muse';}
+    function platName(){return S.plat==='Other'?(S.platOther||'your AI app'):S.plat;}
+    function platInfo(){for(var i=0;i<CONFIG.platforms.length;i++)if(CONFIG.platforms[i].id===S.plat)return CONFIG.platforms[i];return null;}
+    function platSteps(){var p=platInfo();return p.steps.concat([['Check in each evening','Your agent works on the job you chose. Spend 10 minutes each evening reviewing its summary, and approve anything before it goes out.']]);}
+
+    // Where should the agent live? Muse (free tokens) or an app they already use (no credits).
+    function platform(){
+      var c=h('div','af-card');c.appendChild(h('p','af-label',esc(CONFIG.platformQuestion)));
+      var g=h('div','af-grid af-2');
+      var m=h('button','af-choice');m.type='button';m.innerHTML='<span class="af-badge" aria-hidden="true">1</span><span><span class="af-h3" style="display:block">'+esc(CONFIG.newToAiTitle)+' <span class="af-heretag">Free tokens</span></span><span class="af-muted">'+esc(CONFIG.newToAiBody)+'</span></span>';
+      m.addEventListener('click',function(){S.plat='Muse';S.platOther='';packet();});g.appendChild(m);
+      var o=h('div','af-device');o.innerHTML='<p class="af-h3"><span class="af-badge" style="display:inline-flex;width:30px;height:30px;margin-right:8px;vertical-align:middle" aria-hidden="true">2</span>'+esc(CONFIG.ownAiTitle)+'</p>';o.appendChild(h('p','af-muted',esc(CONFIG.ownAiBody)));
+      var chips=h('div','af-chips'),oth=h('div','af-hidden'),oi=h('input','af-input'),ob=btn('Continue','af-btn-primary',function(){var v=oi.value.trim();if(!v){oi.focus();return;}S.plat='Other';S.platOther=v;packet();});
+      oi.type='text';oi.placeholder='Which AI app do you use?';oi.value=S.platOther||'';oth.appendChild(oi);ob.style.marginTop='8px';oth.appendChild(ob);
+      CONFIG.platforms.forEach(function(p){var ch=h('button','af-chip',esc(p.id));ch.type='button';ch.setAttribute('aria-pressed',S.plat===p.id?'true':'false');
+        ch.addEventListener('click',function(){if(p.id==='Other'){[].forEach.call(chips.children,function(x){x.setAttribute('aria-pressed','false');});ch.setAttribute('aria-pressed','true');oth.classList.remove('af-hidden');oi.focus();return;}S.plat=p.id;S.platOther='';packet();});chips.appendChild(ch);});
+      o.appendChild(chips);o.appendChild(oth);g.appendChild(o);c.appendChild(g);
+      var n=h('div','af-nav');n.appendChild(btn('Back','af-btn-ghost',function(){S.i=S.path.qs.length-1;question();}));c.appendChild(n);render([c]);
+    }
+
+    // Sign-up: name + email. Salesforce emails the active code and the agent message.
+    function packet(){
+      var a=S.a,c=h('div','af-card');
+      c.appendChild(h('p','af-kicker','Your agent is ready'));c.appendChild(h('h3','af-h2',esc((a.name?a.name+', y':'Y')+'our agent’s first job: '+((a.taskCat&&a.taskCat!=='Something else')?a.taskCat:(a.task||''))+'.')));
+      if(S.minor){
+        c.appendChild(h('p','af-p',esc(CONFIG.minorMessage)));
+        var pe=field(c,'Parent or guardian’s email','email'),te=field(c,'Teacher’s email (add more with commas)','text','',true);
+      }else{
+        c.appendChild(h('p','af-h3','Ready to send you your agent. Enter your email so we can get started.'));
+        c.appendChild(h('p','af-p af-muted',SOFT()?(isMuse()?'Tap the button and your free code and setup steps appear on the next screen.':'Tap the button and your setup steps for '+esc(platName())+' appear on the next screen.'):((isMuse()?'We’ll send your registration code and setup instructions to your email from ':'We’ll send your setup instructions for '+esc(platName())+' to your email from ')+esc(CONFIG.senderEmail)+'. Check it right after you tap the button for your next steps.')));
+        var fn=field(c,'First name','text',a.name||''),ln=field(c,'Last name','text'),em=field(c,'Email','email'),
+            co=coLabel()?field(c,coLabel(),'text',a.biz||'',true):null;
+      }
+      c.appendChild(h('p','af-label',S.minor?'What made you want an agent?':'What made you want an agent?'));c.lastChild.style.fontSize='16px';c.lastChild.style.marginTop='14px';
+      var rchips=h('div','af-chips');S.reason=S.reason||'';reasons().forEach(function(r){var ch=h('button','af-chip',esc(r));ch.type='button';ch.setAttribute('aria-pressed',S.reason===r?'true':'false');ch.addEventListener('click',function(){S.reason=r;[].forEach.call(rchips.children,function(x){x.setAttribute('aria-pressed','false');});ch.setAttribute('aria-pressed','true');});rchips.appendChild(ch);});c.appendChild(rchips);
+      var rmore=field(c,'Anything else we should know?','text','',true);
+      if(!S.minor&&isMuse()&&CONFIG.spotsNote)c.appendChild(h('p','af-muted',esc(SOFT()?'Free spots are limited and go first come, first served.':CONFIG.spotsNote)));
+      var st=h('p','af-muted');st.setAttribute('role','status');c.appendChild(st);
+      c.appendChild(h('p','af-muted',SOFT()?'We use your email to check that your agent started and follow up if you need help. Unsubscribe anytime.':'We use your email to send your code, check that your agent started, and follow up if you need help. Unsubscribe anytime.'));
+      var n=h('div','af-nav');n.appendChild(btn('Back','af-btn-ghost',function(){if(S.minor){S.i=S.path.qs.length-1;question();}else platform();}));
+      n.appendChild(btn(S.minor?'Send to my parent':(isMuse()?'Send me my agent':'Send me my setup steps'),'af-btn-primary',function(){
+        if(!S.reason){st.textContent='Please pick what made you want an agent.';st.className='af-err';return;}
+        var why=S.reason+(rmore.value.trim()?' | '+rmore.value.trim():'');
+        var msg=message(),f={lead_source:CONFIG.sfLeadSource};
+        if(S.minor){
+          var p=pe.value.trim(),t=te.value.trim();
+          if(!okEmail(p)){st.textContent='Please enter your parent or guardian’s email.';st.className='af-err';return;}
+          if(t&&!t.split(',').every(function(x){return okEmail(x.trim());})){st.textContent='Please check the teacher email(s).';st.className='af-err';return;}
+          f.first_name='';f.last_name='Parent of '+(a.name||'student');f.email=p;f.company=(a.name||'Student')+' (family)';
+          f.description='Free AI Agent page | UNDER 18: code goes to parent only, after parent approval\nStudent first name: '+(a.name||'')+'\nTeacher email(s): '+(t||'none')+'\nWhy they signed up: '+why+'\n'+details()+'\n\nAgent message:\n'+sfMsg(msg);
+          S.contact={email:p};
+        }else{
+          var e=em.value.trim();
+          if(!fn.value.trim()){st.textContent='Please enter your first name.';st.className='af-err';return;}
+          if(!okEmail(e)){st.textContent='Please enter a valid email so we can send your code.';st.className='af-err';return;}
+          f.first_name=fn.value.trim();f.last_name=ln.value.trim()||'Unknown';f.email=e;f.company=(co&&co.value.trim())||(fn.value.trim()+' (individual)');
+          f.description='Free AI Agent page | '+(SOFT()?'SOFT LAUNCH | ':'')+(isMuse()?(SOFT()?'Code shown on screen: '+CONFIG.softCode:'Code requested (Muse)'):'Own AI app | Platform: '+platName())+'\nWhy they signed up: '+why+'\n'+details()+'\n\nAgent message:\n'+sfMsg(msg);
+          S.contact={first:f.first_name,last:ln.value.trim(),email:e,company:co?co.value.trim():''};
+        }
+        if(CONFIG.sfCampaignId){f.Campaign_ID=CONFIG.sfCampaignId;f.member_status='Responded';}
+        if(CONFIG.sfMessageField)f[CONFIG.sfMessageField]=msg;
+        if(CONFIG.sfPathField)f[CONFIG.sfPathField]=S.path.label;
+        if(a.web){var wurl=/^https?:\/\//i.test(a.web)?a.web:'https://'+a.web;if(/facebook\.com|fb\.com/i.test(wurl)){if(CONFIG.sfFacebookField)f[CONFIG.sfFacebookField]=wurl;}else f.URL=wurl;}
+        if(CONFIG.sfReasonField)f[CONFIG.sfReasonField]=why;
+        if(CONFIG.sfJobCategoryField&&a.taskCat)f[CONFIG.sfJobCategoryField]=a.taskCat;
+        if(CONFIG.sfPlatformField)f[CONFIG.sfPlatformField]=S.minor?'Muse':(isMuse()?'Muse':platName());
+        if(CONFIG.sfEnabled)sendSF(f);
+        else{location.href='mailto:'+CONFIG.helpEmail+'?subject='+encodeURIComponent('Free AI agent code request')+'&body='+encodeURIComponent(f.description+'\nEmail: '+f.email);}
+        sent();
+      }));
+      c.appendChild(n);render([c]);
+    }
+
+    // After sign-up: check your email, get the app, and an on-screen copy of the message (without the code).
+    function sent(){
+      var out=[],c=h('div','af-card af-offer');
+      if(S.minor){
+        c.appendChild(h('p','af-ok','✓ We emailed your parent or guardian'));
+        c.appendChild(h('p','af-p','We sent it to '+esc(S.contact.email)+' from '+esc(CONFIG.senderEmail)+'. Once they approve, they’ll get your code and the setup steps, and we’ll let your teacher know. Ask them to check their spam folder if they don’t see it.'));
+        out.push(c);var n=h('div','af-nav');n.appendChild(btn('Start over','af-btn-ghost',home));out.push(n);render(out);return;}
+      if(!isMuse()){var P=platInfo();
+        if(SOFT()){c.appendChild(h('p','af-ok','✓ You’re in. Here are your setup steps'));c.appendChild(h('p','af-p','Start right now with the steps below. We’ll check in to see how your agent is doing.'));}
+        else{c.appendChild(h('p','af-ok','✓ Check your email now for next steps'));
+        c.appendChild(h('p','af-p','Your setup instructions for '+esc(platName())+' are on the way to '+esc(S.contact.email)+' from '+esc(CONFIG.senderEmail)+'. You can also start right now with the steps below.'));}
+        var ol=h('ol','af-list');platSteps().forEach(function(x){var li=h('li');li.innerHTML='<strong>'+esc(x[0])+'.</strong> '+esc(x[1]);ol.appendChild(li);});c.appendChild(ol);
+        var ol2=h('div','af-nav');ol2.style.justifyContent='flex-start';if(P.url){ol2.appendChild(link('Open '+platName(),'af-btn-primary',P.url));c.appendChild(ol2);}out.push(c);
+        var mm=h('div','af-card');mm.appendChild(h('h3','af-h3','Your agent message'));var pk2=h('pre','af-packet af-hidden');pk2.textContent=message();var st2=h('p','af-muted');st2.setAttribute('role','status');
+        var r2=h('div','af-nav');r2.style.justifyContent='flex-start';r2.appendChild(btn('Copy my agent message','af-btn-primary',function(){copy(message(),st2);}));r2.appendChild(btn('Show message','af-btn-ghost',function(){pk2.classList.toggle('af-hidden');}));
+        mm.appendChild(r2);mm.appendChild(st2);mm.appendChild(pk2);out.push(mm);
+        var n3=h('div','af-nav');n3.appendChild(btn('Wrong email? Go back','af-btn-ghost',packet));n3.appendChild(btn('Did it work?','af-btn-primary',check));out.push(n3);render(out);return;}
+      if(SOFT()){
+        c.appendChild(h('p','af-ok','✓ You’re in. Here’s your free code'));
+        var cb=h('div','af-codebox');cb.appendChild(h('span','af-code',esc(CONFIG.softCode)));var cst=h('p','af-muted');cst.setAttribute('role','status');
+        cb.appendChild(btn('Copy code','af-btn-primary',function(){copy(CONFIG.softCode,cst);}));c.appendChild(cb);c.appendChild(cst);
+        c.appendChild(h('p','af-p','Redeem it in '+esc(CONFIG.appName)+' under '+esc(CONFIG.redeemPath)+', within '+esc(CONFIG.redeemWindow)+' of creating your account. '+esc(CONFIG.appName)+' confirms your free tokens on that screen.'));
+        var ul0=h('ol','af-list');['Get '+CONFIG.appName+' on your phone or computer and sign up.','Redeem your code ('+CONFIG.softCode+') in '+CONFIG.redeemPath+'.','Paste your agent message into a new chat and send it. Your agent replies with what it will do first.'].forEach(function(x){ul0.appendChild(h('li',null,esc(x)));});c.appendChild(ul0);out.push(c);
+        out.push(getApp('Next: get '+CONFIG.appName));
+      } else {
+      c.appendChild(h('p','af-ok','✓ Check your email now for next steps'));
+      c.appendChild(h('p','af-p','Your registration code and setup instructions are on the way to '+esc(S.contact.email)+' from '+esc(CONFIG.senderEmail)+'. Look for “'+esc(CONFIG.codeEmailSubject)+'.” If it isn’t there in a few minutes, check spam or promotions. If this round of free spots is already full, the email will say you’re on the waitlist, and your code will follow as soon as a spot opens.'));
+      var ul=h('ol','af-list');['Get '+CONFIG.appName+' on your phone or computer and sign up.','Redeem the code from the email in '+CONFIG.redeemPath+', within '+CONFIG.redeemWindow+' of signing up. '+CONFIG.appName+' confirms your free tokens there.','Paste your agent message into a new chat and send it. Your agent replies with what it will do first.'].forEach(function(x){ul.appendChild(h('li',null,esc(x)));});c.appendChild(ul);out.push(c);
+      out.push(getApp('While you wait: get '+CONFIG.appName));
+      }
+      var m=h('div','af-card');m.appendChild(h('h3','af-h3','Your agent message'));
+      m.appendChild(h('p','af-p af-muted',SOFT()?'Your agent’s instructions, written from your answers. You’ll paste this in step 3.':'It’s in your email too. Copy it here if that’s easier.'));
+      var pk=h('pre','af-packet af-hidden');pk.textContent=message();var st=h('p','af-muted');st.setAttribute('role','status');
+      var row=h('div','af-nav');row.style.justifyContent='flex-start';
+      row.appendChild(btn('Copy my agent message','af-btn-ghost',function(){copy(message(),st);}));
+      row.appendChild(btn('Show message','af-btn-ghost',function(){pk.classList.toggle('af-hidden');}));
+      m.appendChild(row);m.appendChild(st);m.appendChild(pk);out.push(m);
+      var n2=h('div','af-nav');n2.appendChild(btn('Wrong email? Go back','af-btn-ghost',packet));n2.appendChild(btn('Walk me through setup','af-btn-primary',function(){S.step=0;setup();}));out.push(n2);render(out);
+    }
+
+    function setup(){
+      var s=CONFIG.steps[S.step],tot=CONFIG.steps.length;if(SOFT()&&CONFIG.softSteps&&CONFIG.softSteps[S.step])s=CONFIG.softSteps[S.step];var c=h('div','af-card');
+      var pr=h('div','af-progress');pr.innerHTML='<span style="width:'+Math.round((S.step+1)/tot*100)+'%"></span>';c.appendChild(pr);
+      c.appendChild(h('p','af-muted','Setup · Step '+(S.step+1)+' of '+tot));
+      var row=h('div','af-step');row.appendChild(h('span','af-num',String(S.step+1)));var body=h('div');body.appendChild(h('p','af-h2',esc(s.title)));body.appendChild(h('p','af-p',app(esc(s.body))));row.appendChild(body);c.appendChild(row);
+      if(S.step===0){var ga=getApp('Pick where you’ll use it');ga.style.margin='12px 0 0';ga.style.boxShadow='none';ga.style.padding='0';ga.style.border='0';c.appendChild(ga);}
+      if(S.step===1&&SOFT()){var cb2=h('div','af-codebox');cb2.appendChild(h('span','af-code',esc(CONFIG.softCode)));var cs2=h('p','af-muted');cs2.setAttribute('role','status');cb2.appendChild(btn('Copy code','af-btn-primary',function(){copy(CONFIG.softCode,cs2);}));c.appendChild(cb2);c.appendChild(cs2);}
+      if(S.step===2){
+        var st=h('p','af-muted');st.setAttribute('role','status');var pk=h('pre','af-packet af-hidden');pk.textContent=message();
+        var r=h('div','af-nav');r.style.justifyContent='flex-start';r.appendChild(btn('Copy my agent message','af-btn-primary',function(){copy(message(),st);}));r.appendChild(btn('Show message','af-btn-ghost',function(){pk.classList.toggle('af-hidden');}));c.appendChild(r);c.appendChild(st);c.appendChild(pk);}
+      var tip=h('details','af-tip');tip.innerHTML='<summary>Stuck?</summary><p class="af-p" style="margin:8px 0 0">'+app(esc(s.tip))+'</p>';c.appendChild(tip);
+      var n=h('div','af-nav');
+      n.appendChild(btn('Back','af-btn-ghost',function(){if(S.step===0)sent();else{S.step--;setup();}}));
+      n.appendChild(btn(S.step===tot-1?'Did it work?':'Next step','af-btn-primary',function(){if(S.step<tot-1){S.step++;setup();}else check();}));
+      c.appendChild(n);render([c]);
+    }
+
+    function check(){
+      var c=h('div','af-card');c.appendChild(h('p','af-label','Is your agent up and running?'));var g=h('div','af-grid af-2');
+      g.appendChild(btn('Yes, it’s working','af-btn-primary',done));g.appendChild(btn('Not yet, I’m stuck','af-btn-ghost',stuck));c.appendChild(g);
+      var n=h('div','af-nav');n.appendChild(btn('Back to the steps','af-btn-ghost',function(){if(isMuse()){S.step=CONFIG.steps.length-1;setup();}else sent();}));c.appendChild(n);render([c]);
+    }
+
+    function done(){
+      var D=S.path.done,c=h('div','af-card af-offer');
+      if(D){c.appendChild(h('p','af-ok','✓ '+esc(D.title)));c.appendChild(h('p','af-p',esc(D.body)));var a=h('a','af-btn af-btn-primary',esc(D.button));a.href=CONFIG.reviewUrl;a.target='_blank';a.rel='noopener';c.appendChild(a);
+        var crm=['Salesforce','HubSpot','Jobber','ServiceTitan','Housecall Pro'].some(function(t){return S.tools.indexOf(t)>-1;});if(D.noCrm&&!crm){var nc=h('p','af-p af-muted',esc(D.noCrm));nc.style.marginTop='12px';c.appendChild(nc);}if(D.always){var al2=h('p','af-p af-muted',esc(D.always));al2.style.marginTop='12px';c.appendChild(al2);}if(D.manager&&S.a.manages==='Yes'){var mc=h('p','af-p af-muted',esc(D.manager));mc.style.marginTop='12px';c.appendChild(mc);}if(S.path.id==='parent'&&S.a.spouseEmail){var sp=h('p','af-p af-muted',(SOFT()?'We’ll reach out to ':'We’ve emailed ')+esc(S.a.spouseName||'your spouse or partner')+(SOFT()?' with their setup steps.':' their setup steps.'));sp.style.marginTop='12px';c.appendChild(sp);}}
+      else{c.appendChild(h('p','af-ok','✓ '+esc(CONFIG.doneTitle)));c.appendChild(h('p','af-p',esc(CONFIG.doneBody)));var a=h('a','af-btn af-btn-primary','Book my free agent review');a.href=CONFIG.reviewUrl;a.target='_blank';a.rel='noopener';c.appendChild(a);}
+      var r=h('div','af-card');r.appendChild(h('h3','af-h2','Earn more free tokens: share your invite code'));
+      r.appendChild(h('p','af-p','Your '+esc(CONFIG.appName)+' account comes with its own invite code. Send it to us and we’ll add it to our list of member codes. When our own codes run out, we share member codes with the new people we set up. If someone redeems yours, you both get free tokens.'));
+      r.appendChild(h('p','af-p af-muted','Find it in '+esc(CONFIG.appName)+' on the invite screen (look for “Invite friends” or “Copy referral link”). It’s 6 characters.'));
+      var K=S.contact||{},rc=field(r,'Your invite code','text'),re=K.email?null:field(r,'Your email','email');rc.maxLength=12;rc.style.textTransform='uppercase';
+      var rs=h('p','af-muted');rs.setAttribute('role','status');r.appendChild(rs);
+      var rn=h('div','af-nav');rn.style.justifyContent='flex-start';rn.appendChild(btn('Send my code','af-btn-primary',function(){
+        var code=rc.value.trim().toUpperCase().replace(/\s/g,''),e=K.email||(re?re.value.trim():'');
+        if(!/^[A-Z0-9]{5,12}$/.test(code)){rs.textContent='Please enter the code exactly as it appears in the app.';rs.className='af-err';return;}
+        if(!okEmail(e)){rs.textContent='Please enter your email so we can match your code to you.';rs.className='af-err';return;}
+        var f={first_name:K.first||S.a.name||'',last_name:K.last||'Unknown',email:e,company:K.company||((K.first||S.a.name||'')+' (individual)'),lead_source:CONFIG.sfLeadSource,description:'Free AI Agent page | Muse invite code shared: '+code+'\n'+details()};
+        if(CONFIG.sfReferralField)f[CONFIG.sfReferralField]=code;if(CONFIG.sfCampaignId){f.Campaign_ID=CONFIG.sfCampaignId;f.member_status='Responded';}
+        if(CONFIG.sfEnabled)sendSF(f);else{location.href='mailto:'+CONFIG.helpEmail+'?subject='+encodeURIComponent('My Muse invite code')+'&body='+encodeURIComponent(f.description+'\nEmail: '+e);}
+        rs.textContent='Thanks! We saved your code. If we share it and someone redeems it, you’ll both get free tokens.';rs.className='af-ok';
+      }));r.appendChild(rn);
+      var n=h('div','af-nav');n.appendChild(btn('Build another agent','af-btn-ghost',home));render(isMuse()?[c,r,n]:[c,n]);
+    }
+
+    function stuck(){
+      var c=h('div','af-card');c.appendChild(h('h3','af-h2','We’ll help you finish'));c.appendChild(h('p','af-p','Tell us what happened and how to reach you. A real person from our team will follow up within one business day.'));
+      c.appendChild(h('p','af-label','What happened?'));var chips=h('div','af-chips');var reason='';
+      CONFIG.stuckReasons.filter(function(r){return !(SOFT()&&/email/i.test(r));}).forEach(function(r){var ch=h('button','af-chip',esc(r));ch.type='button';ch.setAttribute('aria-pressed','false');ch.addEventListener('click',function(){reason=r;[].forEach.call(chips.children,function(x){x.setAttribute('aria-pressed','false');});ch.setAttribute('aria-pressed','true');});chips.appendChild(ch);});c.appendChild(chips);
+      var K=S.contact||{};var last=field(c,'Last name','text',K.last||''),em=field(c,'Email','email',K.email||''),co=coLabel()?field(c,coLabel(),'text',K.company||'',true):null;
+      var st=h('p','af-muted');st.setAttribute('role','status');
+      var n=h('div','af-nav');n.appendChild(btn('Back','af-btn-ghost',check));
+      n.appendChild(btn('Send to our team','af-btn-primary',function(){
+        var e=em.value.trim();if(!okEmail(e)){st.textContent='Please enter a valid email so we can reach you.';st.className='af-err';return;}
+        var desc='Free AI Agent page | Platform: '+(isMuse()?'Muse':platName())+' | Path: '+S.path.label+' | Stuck: '+(reason||'not given')+'\nFirst job: '+(S.a.task||'')+(S.a.org?'\nContext: '+S.a.org:'')+(S.a.tools?'\nTools: '+S.a.tools:'')+'\nGoal: '+(S.a.goal||'');
+        if(CONFIG.sfEnabled){sendSF({first_name:S.a.name||'',last_name:last.value.trim()||'Unknown',email:e,company:(co&&co.value.trim())||((S.a.name||'')+' (individual)'),lead_source:CONFIG.sfLeadSource,description:desc});st.textContent='Thanks. Our team will email you within one business day.';st.className='af-ok';}
+        else{location.href='mailto:'+CONFIG.helpEmail+'?subject='+encodeURIComponent('Help setting up my AI agent')+'&body='+encodeURIComponent(desc+'\nEmail: '+e);}
+      }));
+      c.appendChild(st);c.appendChild(n);
+      var a=h('a','af-btn af-btn-ghost','Or book a call now');a.href=CONFIG.bookingUrl;a.target='_blank';a.rel='noopener';a.style.marginTop='10px';c.appendChild(a);
+      render([c]);
+    }
+
+    function sendSF(f){
+      var name='afsf'+Math.random().toString(36).slice(2,8);var fr=document.createElement('iframe');fr.name=name;fr.style.display='none';fr.title='hidden';
+      var fm=document.createElement('form');fm.method='POST';fm.action='https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8';fm.target=name;fm.style.display='none';
+      f.oid=CONFIG.sfOrgId;Object.keys(f).forEach(function(k){var i=document.createElement('input');i.type='hidden';i.name=k;i.value=f[k];fm.appendChild(i);});
+      // Kept outside the widget so re-rendering the screen can't cancel the submission; cleaned up after 60s.
+      var box=document.body||root;box.appendChild(fr);box.appendChild(fm);fm.submit();
+      setTimeout(function(){try{fm.parentNode.removeChild(fm);fr.parentNode.removeChild(fr);}catch(e){}},60000);
+    }
+
+    home();
+  }
+  function boot(){[].forEach.call(document.querySelectorAll('.dcp-agent-free'),function(r){if(!r.getAttribute('data-ready')){r.setAttribute('data-ready','1');init(r);}});}
+  if(document.readyState!=='loading')boot();else document.addEventListener('DOMContentLoaded',boot);
+})();
+</script>
